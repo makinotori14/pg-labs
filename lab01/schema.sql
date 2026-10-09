@@ -1,25 +1,16 @@
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
-    first_name VARCHAR(100),
-    last_nmae VARCHAR(100),
+    first_name VARCHAR(100) NOT NULL,
+    last_nmae VARCHAR(100) NOT NULL,
     middle_name VARCHAR(100),
-    phone_number VARCHAR(32),
-    email VARCHAR(254)
-);
-
-CREATE TABLE organizers (
-    id SERIAL PRIMARY KEY,
-    user_id INT NOT NULL REFERENCES users(id),
-    organization VARCHAR(255),
-    job_title VARCHAR(150)
-);
-
-CREATE TABLE speakers (
-    id SERIAL PRIMARY KEY,
-    user_id INT NOT NULL REFERENCES users(id),
+    phone_number VARCHAR(32) NOT NULL UNIQUE,
+    email VARCHAR(254) NOT NULL UNIQUE,
+    job_title VARCHAR(150),
     biography VARCHAR(4000),
     specialization VARCHAR(255),
-    workplace VARCHAR(255)
+    workplace VARCHAR(255),
+    is_organizer BOOLEAN NOT NULL DEFAULT FALSE,
+    is_speaker BOOLEAN NOT NULL DEFAULT FALSE
 );
 
 CREATE TABLE conferences (
@@ -30,7 +21,21 @@ CREATE TABLE conferences (
     start_date TIMESTAMP,
     end_date TIMESTAMP,
     participant_limit INT,
-    status VARCHAR(32),
+    status VARCHAR(32)
+);
+
+CREATE TABLE online_rooms (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    connection_url VARCHAR(2048)
+);
+
+CREATE TABLE offline_rooms (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    address VARCHAR(500),
+    premises VARCHAR(255),
+    capacity INT
 );
 
 CREATE TABLE events (
@@ -53,23 +58,9 @@ CREATE TABLE registrations (
     status VARCHAR(32)
 );
 
-CREATE TABLE online_rooms (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(255),
-    connection_url VARCHAR(2048)
-);
-
-CREATE TABLE offline_rooms (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(255),
-    address VARCHAR(500),
-    premises VARCHAR(255),
-    capacity INT
-);
-
 CREATE TABLE organization_participations (
     id SERIAL PRIMARY KEY,
-    organizer_id INT NOT NULL REFERENCES organizers(id),
+    organizer_id INT NOT NULL REFERENCES users(id),
     conference_id INT NOT NULL REFERENCES conferences(id),
     team_role VARCHAR(100),
     responsibility VARCHAR(2000)
@@ -78,5 +69,5 @@ CREATE TABLE organization_participations (
 CREATE TABLE performances (
     id SERIAL PRIMARY KEY,
     event_id INT NOT NULL REFERENCES events(id),
-    speaker_id INT NOT NULL REFERENCES speakers(id)
+    speaker_id INT NOT NULL REFERENCES users(id)
 );
