@@ -1,2 +1,2 @@
-# pg-labs
-mai db course
+# PostgreSQL Labs
+
