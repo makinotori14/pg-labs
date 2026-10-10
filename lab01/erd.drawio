@@ -331,6 +331,9 @@
                         <mxPoint y="-14" as="offset"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="delete-rules" value="ON DELETE rules (parent -&gt; child)&lt;br&gt;&lt;br&gt;creators -&gt; meetings: RESTRICT&lt;br&gt;online_rooms -&gt; events: RESTRICT&lt;br&gt;offline_rooms -&gt; events: RESTRICT&lt;br&gt;meetings -&gt; events: CASCADE&lt;br&gt;members -&gt; registrations: CASCADE&lt;br&gt;meetings -&gt; registrations: CASCADE" style="shape=note;size=20;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=16;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="3000" y="1100" width="780" height="240" as="geometry" />
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>

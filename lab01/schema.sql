@@ -24,7 +24,7 @@ CREATE TABLE meetings (
     end_at TIMESTAMP NOT NULL,
     creator_id INT NOT NULL,
 
-    FOREIGN KEY (creator_id) REFERENCES creators(id),
+    FOREIGN KEY (creator_id) REFERENCES creators(id) ON DELETE RESTRICT,
 
     CONSTRAINT positive_capacity CHECK (capacity > 0),
     CONSTRAINT valid_period CHECK (end_at > start_at)
@@ -55,10 +55,10 @@ CREATE TABLE events (
     online_room_id INT,
     offline_room_id INT,
 
-    FOREIGN KEY (online_room_id) REFERENCES online_rooms(id),
-    FOREIGN KEY (offline_room_id) REFERENCES offline_rooms(id),
+    FOREIGN KEY (online_room_id) REFERENCES online_rooms(id) ON DELETE RESTRICT,
+    FOREIGN KEY (offline_room_id) REFERENCES offline_rooms(id) ON DELETE RESTRICT,
 
-    FOREIGN KEY (meeting_id) REFERENCES meetings(id),
+    FOREIGN KEY (meeting_id) REFERENCES meetings(id) ON DELETE CASCADE,
 
     CONSTRAINT valid_period CHECK (end_at > start_at),
 
@@ -83,8 +83,8 @@ CREATE TABLE registrations (
     member_id INT NOT NULL,
     meeting_id INT NOT NULL,
 
-    FOREIGN KEY (member_id) REFERENCES members(id),
-    FOREIGN KEY (meeting_id) REFERENCES meetings(id),
+    FOREIGN KEY (member_id) REFERENCES members(id) ON DELETE CASCADE,
+    FOREIGN KEY (meeting_id) REFERENCES meetings(id) ON DELETE CASCADE,
 
     PRIMARY KEY (member_id, meeting_id)
 );
