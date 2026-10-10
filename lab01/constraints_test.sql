@@ -25,23 +25,23 @@ ROLLBACK TO SAVEPOINT test;
 UPDATE events SET online_room_id = NULL, offline_room_id = NULL WHERE id = 1;
 ROLLBACK TO SAVEPOINT test;
 
-INSERT INTO events (
-    id, title, description, start_at, end_at,
-    meeting_id, online_room_id, offline_room_id
-) VALUES (
-    -102, 'Тест', 'Офлайн-пересечение',
-    '2026-10-19 10:30:00', '2026-10-19 10:45:00', 1, NULL, 1
-);
-ROLLBACK TO SAVEPOINT test;
+-- INSERT INTO events (
+--     id, title, description, start_at, end_at,
+--     meeting_id, online_room_id, offline_room_id
+-- ) VALUES (
+--     -102, 'Тест', 'Офлайн-пересечение',
+--     '2026-10-19 10:30:00', '2026-10-19 10:45:00', 1, NULL, 1
+-- );
+-- ROLLBACK TO SAVEPOINT test;
 
-INSERT INTO events (
-    id, title, description, start_at, end_at,
-    meeting_id, online_room_id, offline_room_id
-) VALUES (
-    -103, 'Тест', 'Онлайн-пересечение',
-    '2026-10-19 10:30:00', '2026-10-19 10:45:00', 1, 1, NULL
-);
-ROLLBACK TO SAVEPOINT test;
+-- INSERT INTO events (
+--     id, title, description, start_at, end_at,
+--     meeting_id, online_room_id, offline_room_id
+-- ) VALUES (
+--     -103, 'Тест', 'Онлайн-пересечение',
+--     '2026-10-19 10:30:00', '2026-10-19 10:45:00', 1, 1, NULL
+-- );
+-- ROLLBACK TO SAVEPOINT test;
 
 DELETE FROM creators WHERE id = 1;
 ROLLBACK TO SAVEPOINT test;

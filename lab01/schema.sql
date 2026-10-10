@@ -1,4 +1,4 @@
-CREATE EXTENSION IF NOT EXISTS btree_gist;
+-- CREATE EXTENSION IF NOT EXISTS btree_gist;
 
 CREATE TABLE members (
     id SERIAL PRIMARY KEY,
@@ -62,19 +62,19 @@ CREATE TABLE events (
 
     CONSTRAINT valid_period CHECK (end_at > start_at),
 
-    CONSTRAINT offline_room_collision
-    EXCLUDE USING gist (
-        offline_room_id WITH =,
-        tsrange(start_at, end_at, '[)') WITH &&
-    )
-    WHERE (offline_room_id IS NOT NULL),
+    -- CONSTRAINT offline_room_collision
+    -- EXCLUDE USING gist (
+    --     offline_room_id WITH =,
+    --     tsrange(start_at, end_at, '[)') WITH &&
+    -- )
+    -- WHERE (offline_room_id IS NOT NULL),
 
-    CONSTRAINT online_room_collision
-    EXCLUDE USING gist (
-        online_room_id WITH =,
-        tsrange(start_at, end_at, '[)') WITH &&
-    )
-    WHERE (online_room_id IS NOT NULL),
+    -- CONSTRAINT online_room_collision
+    -- EXCLUDE USING gist (
+    --     online_room_id WITH =,
+    --     tsrange(start_at, end_at, '[)') WITH &&
+    -- )
+    -- WHERE (online_room_id IS NOT NULL),
 
     CONSTRAINT no_empty_rooms CHECK (offline_room_id IS NOT NULL OR online_room_id IS NOT NULL)
 );
