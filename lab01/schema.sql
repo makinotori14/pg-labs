@@ -1,73 +1,90 @@
-CREATE TABLE users (
+CREATE EXTENSION IF NOT EXISTS btree_gist;
+
+CREATE TABLE members (
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(100) NOT NULL,
-    last_nmae VARCHAR(100) NOT NULL,
-    middle_name VARCHAR(100),
-    phone_number VARCHAR(32) NOT NULL UNIQUE,
-    email VARCHAR(254) NOT NULL UNIQUE,
-    job_title VARCHAR(150),
-    biography VARCHAR(4000),
-    specialization VARCHAR(255),
-    workplace VARCHAR(255),
-    is_organizer BOOLEAN NOT NULL DEFAULT FALSE,
-    is_speaker BOOLEAN NOT NULL DEFAULT FALSE
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(254) UNIQUE NOT NULL
 );
 
-CREATE TABLE conferences (
+CREATE TABLE creators (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255),
-    topic VARCHAR(255),
-    description VARCHAR(10000),
-    start_date TIMESTAMP,
-    end_date TIMESTAMP,
-    participant_limit INT,
-    status VARCHAR(32)
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(254) UNIQUE NOT NULL,
+    workplace VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE meetings (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description VARCHAR(3000),
+    capacity INT NOT NULL,
+    start_at TIMESTAMP NOT NULL,
+    end_at TIMESTAMP NOT NULL,
+    creator_id INT NOT NULL,
+
+    FOREIGN KEY (creator_id) REFERENCES creators(id),
+
+    CONSTRAINT positive_capacity CHECK (capacity > 0),
+    CONSTRAINT valid_period CHECK (end_at > start_at)
 );
 
 CREATE TABLE online_rooms (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255),
-    connection_url VARCHAR(2048)
+    url VARCHAR(2000) UNIQUE NOT NULL,
+    platform VARCHAR(100)
 );
 
 CREATE TABLE offline_rooms (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255),
-    address VARCHAR(500),
-    premises VARCHAR(255),
-    capacity INT
+    address VARCHAR(1000) NOT NULL,
+    place VARCHAR(500) NOT NULL,
+
+    UNIQUE(address, place)
 );
 
 CREATE TABLE events (
     id SERIAL PRIMARY KEY,
-    conference_id INT NOT NULL REFERENCES conferences(id),
-    online_room_id INT NOT NULL REFERENCES online_rooms(id),
-    offline_room_id INT NOT NULL REFERENCES offline_rooms(id),
-    name VARCHAR(255),
-    description VARCHAR(10000),
-    event_type VARCHAR(64),
-    starts_at TIMESTAMP,
-    ends_at TIMESTAMP
+    title VARCHAR(255) NOT NULL,
+    description VARCHAR(3000) NOT NULL,
+    start_at TIMESTAMP NOT NULL,
+    end_at TIMESTAMP NOT NULL,
+    meeting_id INT NOT NULL,
+
+    online_room_id INT,
+    offline_room_id INT,
+
+    FOREIGN KEY (online_room_id) REFERENCES online_rooms(id),
+    FOREIGN KEY (offline_room_id) REFERENCES offline_rooms(id),
+
+    FOREIGN KEY (meeting_id) REFERENCES meetings(id),
+
+    CONSTRAINT valid_period CHECK (end_at > start_at),
+
+    CONSTRAINT offline_room_collision
+    EXCLUDE USING gist (
+        offline_room_id WITH =,
+        tsrange(start_at, end_at, '[)') WITH &&
+    )
+    WHERE (offline_room_id IS NOT NULL),
+
+    CONSTRAINT online_room_collision
+    EXCLUDE USING gist (
+        online_room_id WITH =,
+        tsrange(start_at, end_at, '[)') WITH &&
+    )
+    WHERE (online_room_id IS NOT NULL),
+
+    CONSTRAINT no_empty_rooms CHECK (offline_room_id IS NOT NULL OR online_room_id IS NOT NULL)
 );
 
 CREATE TABLE registrations (
-    id SERIAL PRIMARY KEY,
-    user_id INT REFERENCES users(id),
-    conference_id INT REFERENCES conferences(id),
-    registered_at TIMESTAMP,
-    status VARCHAR(32)
-);
+    member_id INT NOT NULL,
+    meeting_id INT NOT NULL,
 
-CREATE TABLE organization_participations (
-    id SERIAL PRIMARY KEY,
-    organizer_id INT NOT NULL REFERENCES users(id),
-    conference_id INT NOT NULL REFERENCES conferences(id),
-    team_role VARCHAR(100),
-    responsibility VARCHAR(2000)
-);
+    FOREIGN KEY (member_id) REFERENCES members(id),
+    FOREIGN KEY (meeting_id) REFERENCES meetings(id),
 
-CREATE TABLE performances (
-    id SERIAL PRIMARY KEY,
-    event_id INT NOT NULL REFERENCES events(id),
-    speaker_id INT NOT NULL REFERENCES users(id)
+    PRIMARY KEY (member_id, meeting_id)
 );

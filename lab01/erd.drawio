@@ -1,1049 +1,338 @@
 <mxfile host="65bd71144e">
     <diagram id="conference-entities" name="Page-1">
-        <mxGraphModel dx="750" dy="343" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="6300" pageHeight="3200" math="0" shadow="0">
+        <mxGraphModel dx="13125" dy="14350" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="6300" pageHeight="3200" math="0" shadow="0">
             <root>
-                <mxCell id="0"/>
-                <mxCell id="1" parent="0"/>
-                <mxCell id="user" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Пользователь" vertex="1">
-                    <mxGeometry height="120" width="220" x="1290" y="520" as="geometry"/>
+                <mxCell id="0" />
+                <mxCell id="1" parent="0" />
+                <mxCell id="participant" value="members" style="whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="600" y="370" width="200" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="conference" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Конференция" vertex="1">
-                    <mxGeometry height="120" width="220" x="290" y="1920" as="geometry"/>
+                <mxCell id="organizer" value="creators" style="whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="2400" y="370" width="200" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="event" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Событие" vertex="1">
-                    <mxGeometry height="120" width="220" x="2290" y="1920" as="geometry"/>
+                <mxCell id="conference" value="meetings" style="whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1500" y="1170" width="200" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-registration" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Запись на конференцию" vertex="1">
-                    <mxGeometry height="120" width="220" x="1290" y="1220" as="geometry"/>
+                <mxCell id="event" value="events" style="whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1500" y="2020" width="200" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="online-rooms" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Онлайн комнаты" vertex="1">
-                    <mxGeometry height="120" width="220" x="1890" y="2620" as="geometry"/>
+                <mxCell id="online-room" value="online_rooms" style="whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="600" y="2820" width="200" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="offline-rooms" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Оффлайн комнаты" vertex="1">
-                    <mxGeometry height="120" width="220" x="3090" y="1920" as="geometry"/>
+                <mxCell id="offline-room" value="offline_rooms" style="whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="2400" y="2820" width="200" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="user-id" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" value="ID пользователя" vertex="1">
-                    <mxGeometry height="60" width="180" x="810" y="170" as="geometry"/>
+                <mxCell id="participant-id" value="id" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;fontStyle=4;" vertex="1" parent="1">
+                    <mxGeometry x="590" y="190" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="user-id-edge" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;exitX=0.1000;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="user-id" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="participant-id-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="participant" target="participant-id">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="user-first-name" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Имя" vertex="1">
-                    <mxGeometry height="60" width="180" x="1010" y="170" as="geometry"/>
+                <mxCell id="participant-first-name" value="first_name" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="280" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="user-last-name" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Фамилия" vertex="1">
-                    <mxGeometry height="60" width="180" x="1210" y="170" as="geometry"/>
+                <mxCell id="participant-first-name-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="participant" target="participant-first-name">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="user-patronymic" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Отчество" vertex="1">
-                    <mxGeometry height="60" width="180" x="1410" y="170" as="geometry"/>
+                <mxCell id="participant-last-name" value="last_name" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="860" y="280" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="user-phone" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Номер телефона" vertex="1">
-                    <mxGeometry height="60" width="180" x="1610" y="170" as="geometry"/>
+                <mxCell id="participant-last-name-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="participant" target="participant-last-name">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="user-email" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Почта" vertex="1">
-                    <mxGeometry height="60" width="180" x="1810" y="170" as="geometry"/>
+                <mxCell id="participant-email" value="email (UQ)" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="590" y="550" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="user-first-name-edge" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;exitX=0.2600;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="user-first-name" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="participant-email-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="participant" target="participant-email">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="user-last-name-edge" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;exitX=0.4200;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="user-last-name" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="organizer-id" value="id" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;fontStyle=4;" vertex="1" parent="1">
+                    <mxGeometry x="2390" y="190" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="user-patronymic-edge" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;exitX=0.5800;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="user-patronymic" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="organizer-id-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="organizer" target="organizer-id">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="user-phone-edge" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;exitX=0.7400;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="user-phone" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="organizer-first-name" value="first_name" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="2120" y="280" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="user-email-edge" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;exitX=0.9000;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="user-email" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="organizer-first-name-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="organizer" target="organizer-first-name">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-contains-event" parent="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" value="содержит" vertex="1">
-                    <mxGeometry height="80" width="160" x="1320" y="1940" as="geometry"/>
+                <mxCell id="organizer-last-name" value="last_name" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="2660" y="280" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-contains-event-left" edge="1" parent="1" source="conference" style="endArrow=none;html=1;rounded=0;fontSize=14;labelBackgroundColor=#ffffff;" target="conference-contains-event" value="1">
-                    <mxGeometry relative="1" x="-0.85" y="-16" as="geometry"/>
+                <mxCell id="organizer-last-name-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="organizer" target="organizer-last-name">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-contains-event-right" edge="1" parent="1" source="conference-contains-event" style="endArrow=none;html=1;rounded=0;fontSize=14;labelBackgroundColor=#ffffff;" target="event" value="N">
-                    <mxGeometry relative="1" x="0.85" y="-16" as="geometry"/>
+                <mxCell id="organizer-email" value="email (UQ)" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="2120" y="460" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="user-registers" parent="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" value="записывается" vertex="1">
-                    <mxGeometry height="80" width="160" x="1320" y="890" as="geometry"/>
+                <mxCell id="organizer-email-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="organizer" target="organizer-email">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="user-registers-left" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;fontSize=14;labelBackgroundColor=#ffffff;" target="user-registers" value="1">
-                    <mxGeometry relative="1" x="-0.85" y="-16" as="geometry"/>
+                <mxCell id="organizer-workplace" value="workplace" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="2660" y="460" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="user-registers-right" edge="1" parent="1" source="user-registers" style="endArrow=none;html=1;rounded=0;fontSize=14;labelBackgroundColor=#ffffff;" target="conference-registration" value="N">
-                    <mxGeometry relative="1" x="0.85" y="-16" as="geometry"/>
+                <mxCell id="organizer-workplace-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="organizer" target="organizer-workplace">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="registration-enrolls-conference" parent="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" value="записывает" vertex="1">
-                    <mxGeometry height="80" width="160" x="820" y="1590" as="geometry"/>
+                <mxCell id="conference-title" value="title" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1130" y="1170" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="registration-enrolls-conference-left" edge="1" parent="1" source="conference-registration" style="endArrow=none;html=1;rounded=0;fontSize=14;labelBackgroundColor=#ffffff;" target="registration-enrolls-conference" value="N">
-                    <mxGeometry relative="1" x="-0.85" y="-16" as="geometry"/>
+                <mxCell id="conference-title-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="conference" target="conference-title">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="registration-enrolls-conference-right" edge="1" parent="1" source="registration-enrolls-conference" style="endArrow=none;html=1;rounded=0;fontSize=14;labelBackgroundColor=#ffffff;" target="conference" value="1">
-                    <mxGeometry relative="1" x="0.85" y="-16" as="geometry"/>
+                <mxCell id="conference-description" value="description" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1220" y="1080" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="event-held-offline" parent="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" value="проводится" vertex="1">
-                    <mxGeometry height="80" width="160" x="2720" y="1940" as="geometry"/>
+                <mxCell id="conference-description-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="conference" target="conference-description">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="event-held-offline-left" edge="1" parent="1" source="event" style="endArrow=none;html=1;rounded=0;fontSize=14;labelBackgroundColor=#ffffff;" target="event-held-offline" value="1">
-                    <mxGeometry relative="1" x="-0.85" y="-16" as="geometry"/>
+                <mxCell id="conference-capacity" value="capacity" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1760" y="1080" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="event-held-offline-right" edge="1" parent="1" source="event-held-offline" style="endArrow=none;html=1;rounded=0;fontSize=14;labelBackgroundColor=#ffffff;" target="offline-rooms" value="1">
-                    <mxGeometry relative="1" x="0.85" y="-16" as="geometry"/>
+                <mxCell id="conference-capacity-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="conference" target="conference-capacity">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="event-held-online" parent="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" value="проводится" vertex="1">
-                    <mxGeometry height="80" width="160" x="2120" y="2290" as="geometry"/>
+                <mxCell id="conference-organizator" value="creator_id (FK)" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1220" y="1260" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="event-held-online-left" edge="1" parent="1" source="event" style="endArrow=none;html=1;rounded=0;fontSize=14;labelBackgroundColor=#ffffff;" target="event-held-online" value="1">
-                    <mxGeometry relative="1" x="-0.85" y="-16" as="geometry"/>
+                <mxCell id="conference-organizator-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="conference" target="conference-organizator">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="event-held-online-right" edge="1" parent="1" source="event-held-online" style="endArrow=none;html=1;rounded=0;fontSize=14;labelBackgroundColor=#ffffff;" target="online-rooms" value="1">
-                    <mxGeometry relative="1" x="0.85" y="-16" as="geometry"/>
+                <mxCell id="conference-start-at" value="start_at" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1850" y="1170" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="user-position" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Должность" vertex="1">
-                    <mxGeometry height="60" width="220" x="650" y="450" as="geometry"/>
+                <mxCell id="conference-start-at-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="conference" target="conference-start-at">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="user-position-edge" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.3;entryX=1;entryY=0.5;" target="user-position" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="conference-end-at" value="end_at" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1760" y="1260" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="user-bio" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Биография" vertex="1">
-                    <mxGeometry height="60" width="220" x="650" y="570" as="geometry"/>
+                <mxCell id="conference-end-at-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="conference" target="conference-end-at">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="user-bio-edge" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="user-bio" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="event-title" value="title" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1490" y="2200" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="user-specialization" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Специализация" vertex="1">
-                    <mxGeometry height="60" width="220" x="650" y="690" as="geometry"/>
+                <mxCell id="event-title-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="event" target="event-title">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="user-specialization-edge" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.7;entryX=1;entryY=0.5;" target="user-specialization" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="event-description" value="description" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1220" y="1930" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="user-workplace" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Место работы" vertex="1">
-                    <mxGeometry height="60" width="220" x="650" y="810" as="geometry"/>
+                <mxCell id="event-description-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="event" target="event-description">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="user-workplace-edge" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.9;entryX=1;entryY=0.5;" target="user-workplace" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="event-conference" value="meeting_id (FK)" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1760" y="1930" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-id" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" value="ID конференции" vertex="1">
-                    <mxGeometry height="60" width="180" x="10" y="2370" as="geometry"/>
+                <mxCell id="event-conference-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="event" target="event-conference">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-id-edge" edge="1" parent="1" source="conference" style="endArrow=none;html=1;rounded=0;exitX=0.1000;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="conference-id" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="event-start-at" value="start_at" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1220" y="2110" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-name" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Название" vertex="1">
-                    <mxGeometry height="60" width="180" x="210" y="2370" as="geometry"/>
+                <mxCell id="event-start-at-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="event" target="event-start-at">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-name-edge" edge="1" parent="1" source="conference" style="endArrow=none;html=1;rounded=0;exitX=0.2143;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="conference-name" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="event-end-at" value="end_at" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1760" y="2110" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-topic" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Тема" vertex="1">
-                    <mxGeometry height="60" width="180" x="410" y="2370" as="geometry"/>
+                <mxCell id="event-end-at-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="event" target="event-end-at">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-topic-edge" edge="1" parent="1" source="conference" style="endArrow=none;html=1;rounded=0;exitX=0.3286;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="conference-topic" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="online-room-url" value="url (UQ)" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="2730" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-description" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Описание" vertex="1">
-                    <mxGeometry height="60" width="180" x="610" y="2370" as="geometry"/>
+                <mxCell id="online-room-url-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="online-room" target="online-room-url">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-description-edge" edge="1" parent="1" source="conference" style="endArrow=none;html=1;rounded=0;exitX=0.4429;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="conference-description" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="online-room-platform" value="platform" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="2910" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-start" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Дата начала" vertex="1">
-                    <mxGeometry height="60" width="180" x="810" y="2370" as="geometry"/>
+                <mxCell id="online-room-platform-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="online-room" target="online-room-platform">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-start-edge" edge="1" parent="1" source="conference" style="endArrow=none;html=1;rounded=0;exitX=0.5571;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="conference-start" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="event-online-room" value="online_room_id (FK)" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1110" y="1750" width="260" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-end" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Дата окончания" vertex="1">
-                    <mxGeometry height="60" width="180" x="1010" y="2370" as="geometry"/>
+                <mxCell id="event-online-room-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="event" target="event-online-room">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-end-edge" edge="1" parent="1" source="conference" style="endArrow=none;html=1;rounded=0;exitX=0.6714;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="conference-end" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="offline-room-address" value="address" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="2120" y="2730" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-capacity" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Лимит участников" vertex="1">
-                    <mxGeometry height="60" width="180" x="1210" y="2370" as="geometry"/>
+                <mxCell id="offline-room-address-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="offline-room" target="offline-room-address">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-capacity-edge" edge="1" parent="1" source="conference" style="endArrow=none;html=1;rounded=0;exitX=0.7857;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="conference-capacity" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="offline-room-place" value="place" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="2120" y="2910" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-status" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Статус" vertex="1">
-                    <mxGeometry height="60" width="180" x="1410" y="2370" as="geometry"/>
+                <mxCell id="offline-room-place-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="offline-room" target="offline-room-place">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="conference-status-edge" edge="1" parent="1" source="conference" style="endArrow=none;html=1;rounded=0;exitX=0.9000;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="conference-status" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="event-offline-room" value="offline_room_id (FK)" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1830" y="2020" width="260" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="event-id" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" value="ID события" vertex="1">
-                    <mxGeometry height="60" width="180" x="2510" y="2370" as="geometry"/>
+                <mxCell id="event-offline-room-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="event" target="event-offline-room">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="event-id-edge" edge="1" parent="1" source="event" style="endArrow=none;html=1;rounded=0;exitX=0.6000;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="event-id" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="conference-id" value="id" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;fontStyle=4;" vertex="1" parent="1">
+                    <mxGeometry x="1490" y="990" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="event-name" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Название" vertex="1">
-                    <mxGeometry height="60" width="180" x="2710" y="2370" as="geometry"/>
+                <mxCell id="conference-id-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="conference" target="conference-id">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="event-name-edge" edge="1" parent="1" source="event" style="endArrow=none;html=1;rounded=0;exitX=0.6700;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="event-name" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="event-id" value="id" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;fontStyle=4;" vertex="1" parent="1">
+                    <mxGeometry x="1130" y="2020" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="event-description" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Описание" vertex="1">
-                    <mxGeometry height="60" width="180" x="2910" y="2370" as="geometry"/>
+                <mxCell id="event-id-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="event" target="event-id">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="event-description-edge" edge="1" parent="1" source="event" style="endArrow=none;html=1;rounded=0;exitX=0.7400;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="event-description" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="online-room-id" value="id" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;fontStyle=4;" vertex="1" parent="1">
+                    <mxGeometry x="590" y="2640" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="event-type" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Тип события" vertex="1">
-                    <mxGeometry height="60" width="180" x="3110" y="2370" as="geometry"/>
+                <mxCell id="online-room-id-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="online-room" target="online-room-id">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="event-type-edge" edge="1" parent="1" source="event" style="endArrow=none;html=1;rounded=0;exitX=0.8100;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="event-type" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="offline-room-id" value="id" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;fontStyle=4;" vertex="1" parent="1">
+                    <mxGeometry x="2390" y="2640" width="220" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="event-start" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Дата и время начала" vertex="1">
-                    <mxGeometry height="60" width="180" x="3310" y="2370" as="geometry"/>
+                <mxCell id="offline-room-id-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="offline-room" target="offline-room-id">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="event-start-edge" edge="1" parent="1" source="event" style="endArrow=none;html=1;rounded=0;exitX=0.8800;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="event-start" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="registration" value="registrations" style="whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1020" y="770" width="260" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="event-end" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Дата и время окончания" vertex="1">
-                    <mxGeometry height="60" width="180" x="3510" y="2370" as="geometry"/>
+                <mxCell id="creation" value="creates" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1950" y="740" width="200" height="120" as="geometry" />
                 </mxCell>
-                <mxCell id="event-end-edge" edge="1" parent="1" source="event" style="endArrow=none;html=1;rounded=0;exitX=0.9500;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="event-end" value="">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="creation-organizer-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="organizer" target="creation">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="registration-id" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" value="ID записи" vertex="1">
-                    <mxGeometry height="60" width="180" x="1650" y="1020" as="geometry"/>
-                </mxCell>
-                <mxCell id="registration-id-edge" edge="1" parent="1" source="conference-registration" style="endArrow=none;html=1;rounded=0;exitX=1.0000;exitY=0.1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="registration-id" value="">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="registration-time" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Дата и время регистрации" vertex="1">
-                    <mxGeometry height="60" width="180" x="1650" y="1250" as="geometry"/>
-                </mxCell>
-                <mxCell id="registration-time-edge" edge="1" parent="1" source="conference-registration" style="endArrow=none;html=1;rounded=0;exitX=1.0000;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="registration-time" value="">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="registration-status" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Статус" vertex="1">
-                    <mxGeometry height="60" width="180" x="1650" y="1480" as="geometry"/>
-                </mxCell>
-                <mxCell id="registration-status-edge" edge="1" parent="1" source="conference-registration" style="endArrow=none;html=1;rounded=0;exitX=1.0000;exitY=0.9;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="registration-status" value="">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="online-room-id" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" value="ID комнаты" vertex="1">
-                    <mxGeometry height="60" width="180" x="1610" y="3020" as="geometry"/>
-                </mxCell>
-                <mxCell id="online-room-id-edge" edge="1" parent="1" source="online-rooms" style="endArrow=none;html=1;rounded=0;exitX=0.1000;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="online-room-id" value="">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="online-room-name" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Название" vertex="1">
-                    <mxGeometry height="60" width="180" x="1810" y="3020" as="geometry"/>
-                </mxCell>
-                <mxCell id="online-room-name-edge" edge="1" parent="1" source="online-rooms" style="endArrow=none;html=1;rounded=0;exitX=0.3667;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="online-room-name" value="">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="online-room-url" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="URL подключения" vertex="1">
-                    <mxGeometry height="60" width="180" x="2210" y="3020" as="geometry"/>
-                </mxCell>
-                <mxCell id="online-room-url-edge" edge="1" parent="1" source="online-rooms" style="endArrow=none;html=1;rounded=0;exitX=0.9000;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="online-room-url" value="">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="offline-room-id" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" value="ID комнаты" vertex="1">
-                    <mxGeometry height="60" width="180" x="2810" y="1620" as="geometry"/>
-                </mxCell>
-                <mxCell id="offline-room-id-edge" edge="1" parent="1" source="offline-rooms" style="endArrow=none;html=1;rounded=0;exitX=0.1000;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="offline-room-id" value="">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="offline-room-name" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Название" vertex="1">
-                    <mxGeometry height="60" width="180" x="3010" y="1620" as="geometry"/>
-                </mxCell>
-                <mxCell id="offline-room-name-edge" edge="1" parent="1" source="offline-rooms" style="endArrow=none;html=1;rounded=0;exitX=0.3000;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="offline-room-name" value="">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="offline-room-address" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Адрес" vertex="1">
-                    <mxGeometry height="60" width="180" x="3210" y="1620" as="geometry"/>
-                </mxCell>
-                <mxCell id="offline-room-address-edge" edge="1" parent="1" source="offline-rooms" style="endArrow=none;html=1;rounded=0;exitX=0.5000;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="offline-room-address" value="">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="offline-room-number" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Помещение" vertex="1">
-                    <mxGeometry height="60" width="180" x="3410" y="1620" as="geometry"/>
-                </mxCell>
-                <mxCell id="offline-room-number-edge" edge="1" parent="1" source="offline-rooms" style="endArrow=none;html=1;rounded=0;exitX=0.7000;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="offline-room-number" value="">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="offline-room-capacity" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Вместимость" vertex="1">
-                    <mxGeometry height="60" width="180" x="3610" y="1620" as="geometry"/>
-                </mxCell>
-                <mxCell id="offline-room-capacity-edge" edge="1" parent="1" source="offline-rooms" style="endArrow=none;html=1;rounded=0;exitX=0.9000;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="offline-room-capacity" value="">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="organization-participation" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Участие в организации" vertex="1">
-                    <mxGeometry height="120" width="220" x="290" y="1570" as="geometry"/>
-                </mxCell>
-                <mxCell id="organization-participation-id" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" value="ID участия" vertex="1">
-                    <mxGeometry height="60" width="180" x="10" y="1570" as="geometry"/>
-                </mxCell>
-                <mxCell id="organization-participation-id-edge" edge="1" parent="1" source="organization-participation" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.15;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="organization-participation-id" value="">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="organization-participation-role" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Роль в команде" vertex="1">
-                    <mxGeometry height="60" width="180" x="10" y="1700" as="geometry"/>
-                </mxCell>
-                <mxCell id="organization-participation-role-edge" edge="1" parent="1" source="organization-participation" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="organization-participation-role" value="">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="organization-participation-responsibility" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Зона ответственности" vertex="1">
-                    <mxGeometry height="60" width="180" x="10" y="1830" as="geometry"/>
-                </mxCell>
-                <mxCell id="organization-participation-responsibility-edge" edge="1" parent="1" source="organization-participation" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.85;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="organization-participation-responsibility" value="">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="user-has-participation" parent="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" value="участвует" vertex="1">
-                    <mxGeometry height="80" width="160" x="900" y="1120" as="geometry"/>
-                </mxCell>
-                <mxCell id="user-has-participation-left" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;fontSize=14;labelBackgroundColor=#ffffff;" target="user-has-participation" value="1">
-                    <mxGeometry relative="1" x="-0.85" y="-16" as="geometry"/>
-                </mxCell>
-                <mxCell id="user-has-participation-right" edge="1" parent="1" source="user-has-participation" style="endArrow=none;html=1;rounded=0;fontSize=14;labelBackgroundColor=#ffffff;" target="organization-participation" value="N">
-                    <mxGeometry relative="1" x="0.85" y="-16" as="geometry"/>
-                </mxCell>
-                <mxCell id="conference-has-participation" parent="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" value="включает" vertex="1">
-                    <mxGeometry height="80" width="160" x="320" y="1765" as="geometry"/>
-                </mxCell>
-                <mxCell id="conference-has-participation-left" edge="1" parent="1" source="conference" style="endArrow=none;html=1;rounded=0;fontSize=14;labelBackgroundColor=#ffffff;" target="conference-has-participation" value="1">
-                    <mxGeometry relative="1" x="-0.85" y="-16" as="geometry"/>
-                </mxCell>
-                <mxCell id="conference-has-participation-right" edge="1" parent="1" source="conference-has-participation" style="endArrow=none;html=1;rounded=0;fontSize=14;labelBackgroundColor=#ffffff;" target="organization-participation" value="N">
-                    <mxGeometry relative="1" x="0.85" y="-16" as="geometry"/>
-                </mxCell>
-                <mxCell id="performance" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Выступление" vertex="1">
-                    <mxGeometry height="120" width="220" x="2290" y="1220" as="geometry"/>
-                </mxCell>
-                <mxCell id="performance-id" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" value="ID выступления" vertex="1">
-                    <mxGeometry height="60" width="180" x="2610" y="1250" as="geometry"/>
-                </mxCell>
-                <mxCell id="performance-id-edge" edge="1" parent="1" source="performance" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="performance-id" value="">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="user-has-performance" parent="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" value="участвует" vertex="1">
-                    <mxGeometry height="80" width="160" x="1820" y="890" as="geometry"/>
-                </mxCell>
-                <mxCell id="user-has-performance-left" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;fontSize=14;labelBackgroundColor=#ffffff;exitX=1;exitY=1;entryX=0.5;entryY=0;" target="user-has-performance" value="1">
-                    <mxGeometry relative="1" x="-0.85" y="-16" as="geometry"/>
-                </mxCell>
-                <mxCell id="user-has-performance-right" edge="1" parent="1" source="user-has-performance" style="endArrow=none;html=1;rounded=0;fontSize=14;labelBackgroundColor=#ffffff;" target="performance" value="N">
-                    <mxGeometry relative="1" x="0.85" y="-16" as="geometry"/>
-                </mxCell>
-                <mxCell id="event-has-performance" parent="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" value="содержит" vertex="1">
-                    <mxGeometry height="80" width="160" x="2320" y="1590" as="geometry"/>
-                </mxCell>
-                <mxCell id="event-has-performance-left" edge="1" parent="1" source="event" style="endArrow=none;html=1;rounded=0;fontSize=14;labelBackgroundColor=#ffffff;" target="event-has-performance" value="1">
-                    <mxGeometry relative="1" x="-0.85" y="-16" as="geometry"/>
-                </mxCell>
-                <mxCell id="event-has-performance-right" edge="1" parent="1" source="event-has-performance" style="endArrow=none;html=1;rounded=0;fontSize=14;labelBackgroundColor=#ffffff;" target="performance" value="N">
-                    <mxGeometry relative="1" x="0.85" y="-16" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-users" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;whiteSpace=wrap;fontSize=14;" value="Пользователь" vertex="1">
-                    <mxGeometry height="420" width="600" x="4200" y="170" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-users-row-1" parent="relational-users" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-users-row-1-key" parent="relational-users-row-1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="PK" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-1-field" parent="relational-users-row-1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=5;" value="ID пользователя" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-2" parent="relational-users" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-users-row-2-key" parent="relational-users-row-2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-2-field" parent="relational-users-row-2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Имя" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-3" parent="relational-users" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="90" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-users-row-3-key" parent="relational-users-row-3" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-3-field" parent="relational-users-row-3" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Фамилия" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-4" parent="relational-users" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="120" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-users-row-4-key" parent="relational-users-row-4" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-4-field" parent="relational-users-row-4" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Отчество" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-5" parent="relational-users" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="150" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-users-row-5-key" parent="relational-users-row-5" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="UQ" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-5-field" parent="relational-users-row-5" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Номер телефона" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-6" parent="relational-users" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="180" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-users-row-6-key" parent="relational-users-row-6" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="UQ" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-6-field" parent="relational-users-row-6" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Почта" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-7" parent="relational-users" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="210" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-users-row-7-key" parent="relational-users-row-7" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-7-field" parent="relational-users-row-7" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Организация" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-8" parent="relational-users" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="240" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-users-row-8-key" parent="relational-users-row-8" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-8-field" parent="relational-users-row-8" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Должность" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-9" parent="relational-users" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="270" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-users-row-9-key" parent="relational-users-row-9" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-9-field" parent="relational-users-row-9" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Биография" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-10" parent="relational-users" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="300" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-users-row-10-key" parent="relational-users-row-10" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-10-field" parent="relational-users-row-10" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Специализация" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-11" parent="relational-users" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="330" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-users-row-11-key" parent="relational-users-row-11" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-11-field" parent="relational-users-row-11" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Место работы" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-12" parent="relational-users" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="360" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-users-row-12-key" parent="relational-users-row-12" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-12-field" parent="relational-users-row-12" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="is_organizer (BOOLEAN)" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-13" parent="relational-users" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="390" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-users-row-13-key" parent="relational-users-row-13" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-users-row-13-field" parent="relational-users-row-13" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="is_speaker (BOOLEAN)" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-conferences" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;whiteSpace=wrap;fontSize=14;" value="Конференция" vertex="1">
-                    <mxGeometry height="270" width="600" x="4200" y="620" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-conferences-row-1" parent="relational-conferences" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-conferences-row-1-key" parent="relational-conferences-row-1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="PK" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-conferences-row-1-field" parent="relational-conferences-row-1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=5;" value="ID конференции" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-conferences-row-2" parent="relational-conferences" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-conferences-row-2-key" parent="relational-conferences-row-2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-conferences-row-2-field" parent="relational-conferences-row-2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Название" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-conferences-row-3" parent="relational-conferences" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="90" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-conferences-row-3-key" parent="relational-conferences-row-3" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-conferences-row-3-field" parent="relational-conferences-row-3" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Тема" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-conferences-row-4" parent="relational-conferences" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="120" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-conferences-row-4-key" parent="relational-conferences-row-4" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-conferences-row-4-field" parent="relational-conferences-row-4" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Описание" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-conferences-row-5" parent="relational-conferences" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="150" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-conferences-row-5-key" parent="relational-conferences-row-5" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-conferences-row-5-field" parent="relational-conferences-row-5" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Дата начала" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-conferences-row-6" parent="relational-conferences" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="180" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-conferences-row-6-key" parent="relational-conferences-row-6" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-conferences-row-6-field" parent="relational-conferences-row-6" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Дата окончания" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-conferences-row-7" parent="relational-conferences" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="210" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-conferences-row-7-key" parent="relational-conferences-row-7" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-conferences-row-7-field" parent="relational-conferences-row-7" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Лимит участников" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-conferences-row-8" parent="relational-conferences" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="240" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-conferences-row-8-key" parent="relational-conferences-row-8" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-conferences-row-8-field" parent="relational-conferences-row-8" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Статус" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-events" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;whiteSpace=wrap;fontSize=14;" value="Событие" vertex="1">
-                    <mxGeometry height="300" width="600" x="4850" y="620" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-events-row-1" parent="relational-events" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-events-row-1-key" parent="relational-events-row-1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="PK" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-events-row-1-field" parent="relational-events-row-1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=5;" value="ID события" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-events-row-2" parent="relational-events" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-events-row-2-key" parent="relational-events-row-2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="FK" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-events-row-2-field" parent="relational-events-row-2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="ID конференции → Конференция.ID конференции" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-events-row-3" parent="relational-events" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="90" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-events-row-3-key" parent="relational-events-row-3" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="FK, UQ" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-events-row-3-field" parent="relational-events-row-3" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="ID онлайн-комнаты → Онлайн комнаты.ID комнаты (необяз.)" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-events-row-4" parent="relational-events" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="120" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-events-row-4-key" parent="relational-events-row-4" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="FK, UQ" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-events-row-4-field" parent="relational-events-row-4" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="ID офлайн-комнаты → Оффлайн комнаты.ID комнаты (необяз.)" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-events-row-5" parent="relational-events" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="150" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-events-row-5-key" parent="relational-events-row-5" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-events-row-5-field" parent="relational-events-row-5" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Название" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-events-row-6" parent="relational-events" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="180" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-events-row-6-key" parent="relational-events-row-6" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-events-row-6-field" parent="relational-events-row-6" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Описание" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-events-row-7" parent="relational-events" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="210" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-events-row-7-key" parent="relational-events-row-7" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-events-row-7-field" parent="relational-events-row-7" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Тип события" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-events-row-8" parent="relational-events" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="240" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-events-row-8-key" parent="relational-events-row-8" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-events-row-8-field" parent="relational-events-row-8" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Дата и время начала" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-events-row-9" parent="relational-events" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="270" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-events-row-9-key" parent="relational-events-row-9" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-events-row-9-field" parent="relational-events-row-9" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Дата и время окончания" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-registrations" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;whiteSpace=wrap;fontSize=14;" value="Запись на конференцию" vertex="1">
-                    <mxGeometry height="180" width="600" x="5500" y="620" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-registrations-row-1" parent="relational-registrations" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-registrations-row-1-key" parent="relational-registrations-row-1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="PK" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-registrations-row-1-field" parent="relational-registrations-row-1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=5;" value="ID записи" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-registrations-row-2" parent="relational-registrations" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-registrations-row-2-key" parent="relational-registrations-row-2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="FK" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-registrations-row-2-field" parent="relational-registrations-row-2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="ID пользователя → Пользователь.ID пользователя" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-registrations-row-3" parent="relational-registrations" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="90" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-registrations-row-3-key" parent="relational-registrations-row-3" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="FK" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-registrations-row-3-field" parent="relational-registrations-row-3" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="ID конференции → Конференция.ID конференции" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-registrations-row-4" parent="relational-registrations" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="120" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-registrations-row-4-key" parent="relational-registrations-row-4" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-registrations-row-4-field" parent="relational-registrations-row-4" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Дата и время регистрации" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-registrations-row-5" parent="relational-registrations" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="150" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-registrations-row-5-key" parent="relational-registrations-row-5" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-registrations-row-5-field" parent="relational-registrations-row-5" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Статус" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-online-rooms" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;whiteSpace=wrap;fontSize=14;" value="Онлайн комнаты" vertex="1">
-                    <mxGeometry height="120" width="600" x="4200" y="1070" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-online-rooms-row-1" parent="relational-online-rooms" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-online-rooms-row-1-key" parent="relational-online-rooms-row-1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="PK" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-online-rooms-row-1-field" parent="relational-online-rooms-row-1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=5;" value="ID комнаты" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-online-rooms-row-2" parent="relational-online-rooms" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-online-rooms-row-2-key" parent="relational-online-rooms-row-2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-online-rooms-row-2-field" parent="relational-online-rooms-row-2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Название" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-online-rooms-row-3" parent="relational-online-rooms" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="90" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-online-rooms-row-3-key" parent="relational-online-rooms-row-3" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="UQ" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-online-rooms-row-3-field" parent="relational-online-rooms-row-3" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="URL подключения" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-offline-rooms" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;whiteSpace=wrap;fontSize=14;" value="Оффлайн комнаты" vertex="1">
-                    <mxGeometry height="180" width="600" x="4850" y="1070" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-offline-rooms-row-1" parent="relational-offline-rooms" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-offline-rooms-row-1-key" parent="relational-offline-rooms-row-1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="PK" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
+                <mxCell id="creation-organizer-edge-cardinality" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="creation-organizer-edge">
+                    <mxGeometry x="-0.6" y="0" relative="1" as="geometry">
+                        <mxPoint x="0" y="-14" as="offset" />
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="relational-offline-rooms-row-1-field" parent="relational-offline-rooms-row-1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=5;" value="ID комнаты" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-offline-rooms-row-2" parent="relational-offline-rooms" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="relational-offline-rooms-row-2-key" parent="relational-offline-rooms-row-2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
+                <mxCell id="creation-conference-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="conference" target="creation">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-offline-rooms-row-2-field" parent="relational-offline-rooms-row-2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Название" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
+                <mxCell id="creation-conference-edge-cardinality" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="creation-conference-edge">
+                    <mxGeometry x="-0.6" y="0" relative="1" as="geometry">
+                        <mxPoint x="0" y="-14" as="offset" />
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="relational-offline-rooms-row-3" parent="relational-offline-rooms" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="90" as="geometry"/>
+                <mxCell id="containment" value="contains" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1500" y="1565" width="200" height="120" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-offline-rooms-row-3-key" parent="relational-offline-rooms-row-3" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
+                <mxCell id="containment-conference-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="conference" target="containment">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-offline-rooms-row-3-field" parent="relational-offline-rooms-row-3" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Адрес" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
+                <mxCell id="containment-conference-edge-cardinality" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="containment-conference-edge">
+                    <mxGeometry x="-0.6" y="0" relative="1" as="geometry">
+                        <mxPoint x="0" y="-14" as="offset" />
                     </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-offline-rooms-row-4" parent="relational-offline-rooms" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="relational-offline-rooms-row-4-key" parent="relational-offline-rooms-row-4" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
+                <mxCell id="containment-event-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="event" target="containment">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-offline-rooms-row-4-field" parent="relational-offline-rooms-row-4" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Помещение" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
+                <mxCell id="containment-event-edge-cardinality" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="containment-event-edge">
+                    <mxGeometry x="-0.6" y="0" relative="1" as="geometry">
+                        <mxPoint x="0" y="-14" as="offset" />
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="relational-offline-rooms-row-5" parent="relational-offline-rooms" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="150" as="geometry"/>
+                <mxCell id="online-room-relation" value="uses" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1050" y="2390" width="200" height="120" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-offline-rooms-row-5-key" parent="relational-offline-rooms-row-5" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
+                <mxCell id="online-room-relation-event-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="event" target="online-room-relation">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-offline-rooms-row-5-field" parent="relational-offline-rooms-row-5" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Вместимость" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
+                <mxCell id="online-room-relation-event-edge-cardinality" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="online-room-relation-event-edge">
+                    <mxGeometry x="-0.6" y="0" relative="1" as="geometry">
+                        <mxPoint x="0" y="-14" as="offset" />
                     </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-performances" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;whiteSpace=wrap;fontSize=14;" value="Выступление" vertex="1">
-                    <mxGeometry height="120" width="600" x="5500" y="1070" as="geometry"/>
                 </mxCell>
-                <mxCell id="relational-performances-row-1" parent="relational-performances" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="30" as="geometry"/>
+                <mxCell id="online-room-relation-online-room-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="online-room" target="online-room-relation">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-performances-row-1-key" parent="relational-performances-row-1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="PK" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
+                <mxCell id="online-room-relation-online-room-edge-cardinality" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="online-room-relation-online-room-edge">
+                    <mxGeometry x="-0.6" y="0" relative="1" as="geometry">
+                        <mxPoint x="0" y="-14" as="offset" />
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="relational-performances-row-1-field" parent="relational-performances-row-1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=5;" value="ID выступления" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-performances-row-2" parent="relational-performances" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="60" as="geometry"/>
+                <mxCell id="offline-room-relation" value="uses" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1950" y="2390" width="200" height="120" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-performances-row-2-key" parent="relational-performances-row-2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="FK" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
+                <mxCell id="offline-room-relation-event-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="event" target="offline-room-relation">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-performances-row-2-field" parent="relational-performances-row-2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="ID события → Событие.ID события" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
+                <mxCell id="offline-room-relation-event-edge-cardinality" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="offline-room-relation-event-edge">
+                    <mxGeometry x="-0.6" y="0" relative="1" as="geometry">
+                        <mxPoint x="0" y="-14" as="offset" />
                     </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-performances-row-3" parent="relational-performances" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="relational-performances-row-3-key" parent="relational-performances-row-3" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="FK" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
+                <mxCell id="offline-room-relation-offline-room-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="offline-room" target="offline-room-relation">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-performances-row-3-field" parent="relational-performances-row-3" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="ID спикера → Пользователь.ID пользователя" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
+                <mxCell id="offline-room-relation-offline-room-edge-cardinality" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="offline-room-relation-offline-room-edge">
+                    <mxGeometry x="-0.6" y="0" relative="1" as="geometry">
+                        <mxPoint x="0" y="-14" as="offset" />
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="relational-organization-participations" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;whiteSpace=wrap;fontSize=14;" value="Участие в организации" vertex="1">
-                    <mxGeometry height="180" width="600" x="4200" y="1520" as="geometry"/>
+                <mxCell id="registration-participant-id" value="member_id (PK, FK)" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;fontStyle=4;" vertex="1" parent="1">
+                    <mxGeometry x="750" y="860" width="260" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-organization-participations-row-1" parent="relational-organization-participations" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="30" as="geometry"/>
+                <mxCell id="registration-participant-id-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="registration" target="registration-participant-id">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-organization-participations-row-1-key" parent="relational-organization-participations-row-1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="PK" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
+                <mxCell id="registration-conference-id" value="meeting_id (PK, FK)" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;fontStyle=4;" vertex="1" parent="1">
+                    <mxGeometry x="1290" y="860" width="260" height="60" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-organization-participations-row-1-field" parent="relational-organization-participations-row-1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=5;" value="ID участия" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
+                <mxCell id="registration-conference-id-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="registration" target="registration-conference-id">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-organization-participations-row-2" parent="relational-organization-participations" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="60" as="geometry"/>
+                <mxCell id="participant-registration" value="makes" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="835" y="550" width="180" height="100" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-organization-participations-row-2-key" parent="relational-organization-participations-row-2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="FK" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
+                <mxCell id="participant-registration-participant-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="participant" target="participant-registration">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-organization-participations-row-2-field" parent="relational-organization-participations-row-2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="ID организатора → Пользователь.ID пользователя" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
+                <mxCell id="participant-registration-participant-edge-cardinality" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="participant-registration-participant-edge">
+                    <mxGeometry x="-0.6" y="0" relative="1" as="geometry">
+                        <mxPoint x="0" y="-14" as="offset" />
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="relational-organization-participations-row-3" parent="relational-organization-participations" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="90" as="geometry"/>
+                <mxCell id="participant-registration-registration-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="registration" target="participant-registration">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-organization-participations-row-3-key" parent="relational-organization-participations-row-3" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="FK" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
+                <mxCell id="participant-registration-registration-edge-cardinality" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="participant-registration-registration-edge">
+                    <mxGeometry x="-0.6" y="0" relative="1" as="geometry">
+                        <mxPoint x="0" y="-14" as="offset" />
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="relational-organization-participations-row-3-field" parent="relational-organization-participations-row-3" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="ID конференции → Конференция.ID конференции" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-organization-participations-row-4" parent="relational-organization-participations" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="120" as="geometry"/>
+                <mxCell id="conference-registration" value="belongs to" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="1285" y="950" width="180" height="100" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-organization-participations-row-4-key" parent="relational-organization-participations-row-4" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
+                <mxCell id="conference-registration-registration-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="registration" target="conference-registration">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-organization-participations-row-4-field" parent="relational-organization-participations-row-4" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Роль в команде" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
+                <mxCell id="conference-registration-registration-edge-cardinality" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="conference-registration-registration-edge">
+                    <mxGeometry x="-0.6" y="0" relative="1" as="geometry">
+                        <mxPoint x="0" y="-14" as="offset" />
                     </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-organization-participations-row-5" parent="relational-organization-participations" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="600" y="150" as="geometry"/>
                 </mxCell>
-                <mxCell id="relational-organization-participations-row-5-key" parent="relational-organization-participations-row-5" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;fontStyle=1;" value="" vertex="1">
-                    <mxGeometry height="30" width="80" as="geometry">
-                        <mxRectangle height="30" width="80" as="alternateBounds"/>
-                    </mxGeometry>
+                <mxCell id="conference-registration-conference-edge" style="endArrow=none;startArrow=none;html=1;rounded=0;" edge="1" parent="1" source="conference" target="conference-registration">
+                    <mxGeometry relative="1" as="geometry" />
                 </mxCell>
-                <mxCell id="relational-organization-participations-row-5-field" parent="relational-organization-participations-row-5" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="Зона ответственности" vertex="1">
-                    <mxGeometry height="30" width="520" x="80" as="geometry">
-                        <mxRectangle height="30" width="520" as="alternateBounds"/>
+                <mxCell id="conference-registration-conference-edge-cardinality" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="conference-registration-conference-edge">
+                    <mxGeometry x="-0.6" y="0" relative="1" as="geometry">
+                        <mxPoint x="0" y="-14" as="offset" />
                     </mxGeometry>
-                </mxCell>
-                <mxCell id="relational-legend" parent="1" style="shape=note;size=20;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontSize=14;" value="Схема таблиц: PK - первичный ключ; FK - внешний ключ; UQ - уникальное значение.&lt;br&gt;Стрелка в строке FK указывает таблицу и ключ, на которые ссылается поле.&lt;br&gt;Все FK обязательны, кроме двух ссылок события на комнаты.&lt;br&gt;У события должна быть хотя бы одна комната; онлайн- и офлайн-комнату можно указать одновременно.&lt;br&gt;Составные UNIQUE:&lt;br&gt;Запись на конференцию: (ID пользователя, ID конференции).&lt;br&gt;Участие в организации: (ID организатора, ID конференции).&lt;br&gt;Выступление: (ID события, ID спикера).&lt;br&gt;Оффлайн комнаты: (Адрес, Помещение).&lt;br&gt;Роли пользователя: is_organizer и is_speaker (BOOLEAN, по умолчанию FALSE).&lt;br&gt;Для участия в организации нужен is_organizer = TRUE; для выступления — is_speaker = TRUE.&lt;br&gt;Проверки ролей реализуются отдельно от внешних ключей." vertex="1">
-                    <mxGeometry height="400" width="1250" x="4850" y="1520" as="geometry"/>
-                </mxCell>
-                <mxCell id="user-is-organizer" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Является организатором" vertex="1">
-                    <mxGeometry height="60" width="220" x="1790" y="390" as="geometry"/>
-                </mxCell>
-                <mxCell id="user-is-organizer-edge" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.2;entryX=0;entryY=0.5;" target="user-is-organizer">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="user-is-speaker" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="Является спикером" vertex="1">
-                    <mxGeometry height="60" width="220" x="1790" y="620" as="geometry"/>
                 </mxCell>
-                <mxCell id="user-is-speaker-edge" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.8;entryX=0;entryY=0.5;" target="user-is-speaker">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="schema-notes" value="Keys and constraints&lt;br&gt;&lt;br&gt;Underlined attributes form the primary key.&lt;br&gt;PK(registrations) = (member_id, meeting_id).&lt;br&gt;FK = foreign key; UQ = unique attribute.&lt;br&gt;UNIQUE offline_rooms(address, place).&lt;br&gt;&lt;br&gt;CHECK meetings.capacity &gt; 0.&lt;br&gt;CHECK meetings / events: end_at &gt; start_at.&lt;br&gt;events requires at least one room; both are allowed.&lt;br&gt;EXCLUDE: events in the same room cannot overlap.&lt;br&gt;Periods use [start_at, end_at).&lt;br&gt;&lt;br&gt;Relationship labels show maximum counts;&lt;br&gt;0..1 marks an optional room reference.&lt;br&gt;FK deletion rule: NO ACTION." style="shape=note;size=20;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=16;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="3000" y="1100" width="780" height="520" as="geometry" />
                 </mxCell>
             </root>
         </mxGraphModel>
