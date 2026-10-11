@@ -20,8 +20,8 @@ CREATE TABLE meetings (
     title VARCHAR(255) NOT NULL,
     description VARCHAR(3000),
     capacity INT NOT NULL,
-    start_at TIMESTAMP NOT NULL,
-    end_at TIMESTAMP NOT NULL,
+    start_at TIMESTAMPTZ NOT NULL,
+    end_at TIMESTAMPTZ NOT NULL,
     creator_id INT NOT NULL,
 
     FOREIGN KEY (creator_id) REFERENCES creators(id) ON DELETE RESTRICT,
@@ -48,8 +48,8 @@ CREATE TABLE events (
     id SERIAL PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     description VARCHAR(3000) NOT NULL,
-    start_at TIMESTAMP NOT NULL,
-    end_at TIMESTAMP NOT NULL,
+    start_at TIMESTAMPTZ NOT NULL,
+    end_at TIMESTAMPTZ NOT NULL,
     meeting_id INT NOT NULL,
 
     online_room_id INT,
@@ -65,14 +65,14 @@ CREATE TABLE events (
     -- CONSTRAINT offline_room_collision
     -- EXCLUDE USING gist (
     --     offline_room_id WITH =,
-    --     tsrange(start_at, end_at, '[)') WITH &&
+    --     tstzrange(start_at, end_at, '[)') WITH &&
     -- )
     -- WHERE (offline_room_id IS NOT NULL),
 
     -- CONSTRAINT online_room_collision
     -- EXCLUDE USING gist (
     --     online_room_id WITH =,
-    --     tsrange(start_at, end_at, '[)') WITH &&
+    --     tstzrange(start_at, end_at, '[)') WITH &&
     -- )
     -- WHERE (online_room_id IS NOT NULL),
 
