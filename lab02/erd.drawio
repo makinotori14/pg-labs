@@ -1,0 +1,953 @@
+<mxfile host="app.diagrams.net" version="24.7.17">
+    <diagram id="crow-foot" name="Crow's Foot">
+        <mxGraphModel dx="1440" dy="1160" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1440" pageHeight="1200" math="0" shadow="0" background="#ffffff">
+            <root>
+                <mxCell id="0" />
+                <mxCell id="1" parent="0" />
+                <mxCell id="title" value="Система управления конференциями" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=25;fontStyle=1;fontColor=#0F172A;" vertex="1" parent="1">
+                    <mxGeometry as="geometry" x="40" y="24" width="1040" height="34" />
+                </mxCell>
+                <mxCell id="subtitle" value="Crow’s Foot · 001_schema.sql + 002_comment.sql" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#64748B;" vertex="1" parent="1">
+                    <mxGeometry as="geometry" x="40" y="64" width="1040" height="24" />
+                </mxCell>
+                <mxCell id="members" value="members" style="swimlane;html=1;startSize=40;horizontal=1;rounded=1;arcSize=10;absoluteArcSize=1;collapsible=0;container=1;recursiveResize=0;swimlaneLine=1;fillColor=#475569;swimlaneFillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontFamily=Helvetica;fontSize=17;fontStyle=1;fontColor=#FFFFFF;align=left;spacingLeft=16;shadow=0;" vertex="1" parent="1">
+                    <mxGeometry as="geometry" x="40" y="130" width="370" height="154" />
+                </mxCell>
+                <mxCell id="members-id-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="members">
+                    <mxGeometry as="geometry" x="1" y="40" width="368" height="27" />
+                </mxCell>
+                <mxCell id="members-id-keys" value="PK" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#475569;" vertex="1" parent="members">
+                    <mxGeometry as="geometry" x="10" y="40" width="53" height="27" />
+                </mxCell>
+                <mxCell id="members-id" value="id" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;fontStyle=1;" vertex="1" parent="members">
+                    <mxGeometry as="geometry" x="65" y="40" width="168" height="27" />
+                </mxCell>
+                <mxCell id="members-id-type" value="serial" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="members">
+                    <mxGeometry as="geometry" x="228" y="40" width="127" height="27" />
+                </mxCell>
+                <mxCell id="members-first_name-keys" value="" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#475569;" vertex="1" parent="members">
+                    <mxGeometry as="geometry" x="10" y="67" width="53" height="27" />
+                </mxCell>
+                <mxCell id="members-first_name" value="first_name" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;" vertex="1" parent="members">
+                    <mxGeometry as="geometry" x="65" y="67" width="168" height="27" />
+                </mxCell>
+                <mxCell id="members-first_name-type" value="varchar(100)" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="members">
+                    <mxGeometry as="geometry" x="228" y="67" width="127" height="27" />
+                </mxCell>
+                <mxCell id="members-last_name-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="members">
+                    <mxGeometry as="geometry" x="1" y="94" width="368" height="27" />
+                </mxCell>
+                <mxCell id="members-last_name-keys" value="" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#475569;" vertex="1" parent="members">
+                    <mxGeometry as="geometry" x="10" y="94" width="53" height="27" />
+                </mxCell>
+                <mxCell id="members-last_name" value="last_name" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;" vertex="1" parent="members">
+                    <mxGeometry as="geometry" x="65" y="94" width="168" height="27" />
+                </mxCell>
+                <mxCell id="members-last_name-type" value="varchar(100)" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="members">
+                    <mxGeometry as="geometry" x="228" y="94" width="127" height="27" />
+                </mxCell>
+                <mxCell id="members-email-keys" value="UQ" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#475569;" vertex="1" parent="members">
+                    <mxGeometry as="geometry" x="10" y="121" width="53" height="27" />
+                </mxCell>
+                <mxCell id="members-email" value="email" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;fontStyle=1;" vertex="1" parent="members">
+                    <mxGeometry as="geometry" x="65" y="121" width="168" height="27" />
+                </mxCell>
+                <mxCell id="members-email-type" value="varchar(254)" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="members">
+                    <mxGeometry as="geometry" x="228" y="121" width="127" height="27" />
+                </mxCell>
+                <mxCell id="registrations" value="registrations" style="swimlane;html=1;startSize=40;horizontal=1;rounded=1;arcSize=10;absoluteArcSize=1;collapsible=0;container=1;recursiveResize=0;swimlaneLine=1;fillColor=#0F766E;swimlaneFillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontFamily=Helvetica;fontSize=17;fontStyle=1;fontColor=#FFFFFF;align=left;spacingLeft=16;shadow=0;" vertex="1" parent="1">
+                    <mxGeometry as="geometry" x="530" y="130" width="370" height="154" />
+                </mxCell>
+                <mxCell id="registrations-member_id-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="registrations">
+                    <mxGeometry as="geometry" x="1" y="40" width="368" height="27" />
+                </mxCell>
+                <mxCell id="registrations-member_id-keys" value="PK FK" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#0F766E;" vertex="1" parent="registrations">
+                    <mxGeometry as="geometry" x="10" y="40" width="53" height="27" />
+                </mxCell>
+                <mxCell id="registrations-member_id" value="member_id" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;fontStyle=1;" vertex="1" parent="registrations">
+                    <mxGeometry as="geometry" x="65" y="40" width="168" height="27" />
+                </mxCell>
+                <mxCell id="registrations-member_id-type" value="integer" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="registrations">
+                    <mxGeometry as="geometry" x="228" y="40" width="127" height="27" />
+                </mxCell>
+                <mxCell id="registrations-meeting_id-keys" value="PK FK" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#0F766E;" vertex="1" parent="registrations">
+                    <mxGeometry as="geometry" x="10" y="67" width="53" height="27" />
+                </mxCell>
+                <mxCell id="registrations-meeting_id" value="meeting_id" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;fontStyle=1;" vertex="1" parent="registrations">
+                    <mxGeometry as="geometry" x="65" y="67" width="168" height="27" />
+                </mxCell>
+                <mxCell id="registrations-meeting_id-type" value="integer" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="registrations">
+                    <mxGeometry as="geometry" x="228" y="67" width="127" height="27" />
+                </mxCell>
+                <mxCell id="registrations-comment_id-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="registrations">
+                    <mxGeometry as="geometry" x="1" y="94" width="368" height="27" />
+                </mxCell>
+                <mxCell id="registrations-comment_id-keys" value="FK" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#0F766E;" vertex="1" parent="registrations">
+                    <mxGeometry as="geometry" x="10" y="94" width="53" height="27" />
+                </mxCell>
+                <mxCell id="registrations-comment_id" value="comment_id ?" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;fontStyle=1;" vertex="1" parent="registrations">
+                    <mxGeometry as="geometry" x="65" y="94" width="168" height="27" />
+                </mxCell>
+                <mxCell id="registrations-comment_id-type" value="integer" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="registrations">
+                    <mxGeometry as="geometry" x="228" y="94" width="127" height="27" />
+                </mxCell>
+                <mxCell id="registrations-notes-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F1F5F9;" vertex="1" parent="registrations">
+                    <mxGeometry as="geometry" x="1" y="125" width="368" height="28" />
+                </mxCell>
+                <mxCell id="registrations-note-0" value="PK (member_id, meeting_id)" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=11;fontColor=#475569;" vertex="1" parent="registrations">
+                    <mxGeometry as="geometry" x="12" y="130" width="346" height="21" />
+                </mxCell>
+                <mxCell id="commentaries" value="commentaries" style="swimlane;html=1;startSize=40;horizontal=1;rounded=1;arcSize=10;absoluteArcSize=1;collapsible=0;container=1;recursiveResize=0;swimlaneLine=1;fillColor=#7C3AED;swimlaneFillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontFamily=Helvetica;fontSize=17;fontStyle=1;fontColor=#FFFFFF;align=left;spacingLeft=16;shadow=0;" vertex="1" parent="1">
+                    <mxGeometry as="geometry" x="1020" y="130" width="370" height="175" />
+                </mxCell>
+                <mxCell id="commentaries-id-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="commentaries">
+                    <mxGeometry as="geometry" x="1" y="40" width="368" height="27" />
+                </mxCell>
+                <mxCell id="commentaries-id-keys" value="PK" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#7C3AED;" vertex="1" parent="commentaries">
+                    <mxGeometry as="geometry" x="10" y="40" width="53" height="27" />
+                </mxCell>
+                <mxCell id="commentaries-id" value="id" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;fontStyle=1;" vertex="1" parent="commentaries">
+                    <mxGeometry as="geometry" x="65" y="40" width="168" height="27" />
+                </mxCell>
+                <mxCell id="commentaries-id-type" value="serial" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="commentaries">
+                    <mxGeometry as="geometry" x="228" y="40" width="127" height="27" />
+                </mxCell>
+                <mxCell id="commentaries-description-keys" value="" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#7C3AED;" vertex="1" parent="commentaries">
+                    <mxGeometry as="geometry" x="10" y="67" width="53" height="27" />
+                </mxCell>
+                <mxCell id="commentaries-description" value="description ?" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;" vertex="1" parent="commentaries">
+                    <mxGeometry as="geometry" x="65" y="67" width="168" height="27" />
+                </mxCell>
+                <mxCell id="commentaries-description-type" value="varchar(3000)" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="commentaries">
+                    <mxGeometry as="geometry" x="228" y="67" width="127" height="27" />
+                </mxCell>
+                <mxCell id="commentaries-mark-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="commentaries">
+                    <mxGeometry as="geometry" x="1" y="94" width="368" height="27" />
+                </mxCell>
+                <mxCell id="commentaries-mark-keys" value="" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#7C3AED;" vertex="1" parent="commentaries">
+                    <mxGeometry as="geometry" x="10" y="94" width="53" height="27" />
+                </mxCell>
+                <mxCell id="commentaries-mark" value="mark" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;" vertex="1" parent="commentaries">
+                    <mxGeometry as="geometry" x="65" y="94" width="168" height="27" />
+                </mxCell>
+                <mxCell id="commentaries-mark-type" value="integer" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="commentaries">
+                    <mxGeometry as="geometry" x="228" y="94" width="127" height="27" />
+                </mxCell>
+                <mxCell id="commentaries-notes-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F1F5F9;" vertex="1" parent="commentaries">
+                    <mxGeometry as="geometry" x="1" y="125" width="368" height="49" />
+                </mxCell>
+                <mxCell id="commentaries-note-0" value="CHECK mark BETWEEN 1 AND 10" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=11;fontColor=#475569;" vertex="1" parent="commentaries">
+                    <mxGeometry as="geometry" x="12" y="130" width="346" height="21" />
+                </mxCell>
+                <mxCell id="commentaries-note-1" value="comment_id не UNIQUE: связь N:1" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=11;fontColor=#475569;" vertex="1" parent="commentaries">
+                    <mxGeometry as="geometry" x="12" y="151" width="346" height="21" />
+                </mxCell>
+                <mxCell id="meetings" value="meetings" style="swimlane;html=1;startSize=40;horizontal=1;rounded=1;arcSize=10;absoluteArcSize=1;collapsible=0;container=1;recursiveResize=0;swimlaneLine=1;fillColor=#1D4ED8;swimlaneFillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontFamily=Helvetica;fontSize=17;fontStyle=1;fontColor=#FFFFFF;align=left;spacingLeft=16;shadow=0;" vertex="1" parent="1">
+                    <mxGeometry as="geometry" x="530" y="370" width="370" height="283" />
+                </mxCell>
+                <mxCell id="meetings-id-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="1" y="40" width="368" height="27" />
+                </mxCell>
+                <mxCell id="meetings-id-keys" value="PK" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#1D4ED8;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="10" y="40" width="53" height="27" />
+                </mxCell>
+                <mxCell id="meetings-id" value="id" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;fontStyle=1;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="65" y="40" width="168" height="27" />
+                </mxCell>
+                <mxCell id="meetings-id-type" value="serial" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="228" y="40" width="127" height="27" />
+                </mxCell>
+                <mxCell id="meetings-title-keys" value="" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#1D4ED8;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="10" y="67" width="53" height="27" />
+                </mxCell>
+                <mxCell id="meetings-title" value="title" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="65" y="67" width="168" height="27" />
+                </mxCell>
+                <mxCell id="meetings-title-type" value="varchar(255)" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="228" y="67" width="127" height="27" />
+                </mxCell>
+                <mxCell id="meetings-description-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="1" y="94" width="368" height="27" />
+                </mxCell>
+                <mxCell id="meetings-description-keys" value="" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#1D4ED8;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="10" y="94" width="53" height="27" />
+                </mxCell>
+                <mxCell id="meetings-description" value="description ?" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="65" y="94" width="168" height="27" />
+                </mxCell>
+                <mxCell id="meetings-description-type" value="varchar(3000)" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="228" y="94" width="127" height="27" />
+                </mxCell>
+                <mxCell id="meetings-capacity-keys" value="" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#1D4ED8;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="10" y="121" width="53" height="27" />
+                </mxCell>
+                <mxCell id="meetings-capacity" value="capacity" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="65" y="121" width="168" height="27" />
+                </mxCell>
+                <mxCell id="meetings-capacity-type" value="integer" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="228" y="121" width="127" height="27" />
+                </mxCell>
+                <mxCell id="meetings-start_at-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="1" y="148" width="368" height="27" />
+                </mxCell>
+                <mxCell id="meetings-start_at-keys" value="" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#1D4ED8;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="10" y="148" width="53" height="27" />
+                </mxCell>
+                <mxCell id="meetings-start_at" value="start_at" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="65" y="148" width="168" height="27" />
+                </mxCell>
+                <mxCell id="meetings-start_at-type" value="timestamptz" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="228" y="148" width="127" height="27" />
+                </mxCell>
+                <mxCell id="meetings-end_at-keys" value="" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#1D4ED8;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="10" y="175" width="53" height="27" />
+                </mxCell>
+                <mxCell id="meetings-end_at" value="end_at" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="65" y="175" width="168" height="27" />
+                </mxCell>
+                <mxCell id="meetings-end_at-type" value="timestamptz" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="228" y="175" width="127" height="27" />
+                </mxCell>
+                <mxCell id="meetings-creator_id-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="1" y="202" width="368" height="27" />
+                </mxCell>
+                <mxCell id="meetings-creator_id-keys" value="FK" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#1D4ED8;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="10" y="202" width="53" height="27" />
+                </mxCell>
+                <mxCell id="meetings-creator_id" value="creator_id" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;fontStyle=1;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="65" y="202" width="168" height="27" />
+                </mxCell>
+                <mxCell id="meetings-creator_id-type" value="integer" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="228" y="202" width="127" height="27" />
+                </mxCell>
+                <mxCell id="meetings-notes-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F1F5F9;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="1" y="233" width="368" height="49" />
+                </mxCell>
+                <mxCell id="meetings-note-0" value="CHECK capacity &gt; 0" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=11;fontColor=#475569;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="12" y="238" width="346" height="21" />
+                </mxCell>
+                <mxCell id="meetings-note-1" value="CHECK end_at &gt; start_at" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=11;fontColor=#475569;" vertex="1" parent="meetings">
+                    <mxGeometry as="geometry" x="12" y="259" width="346" height="21" />
+                </mxCell>
+                <mxCell id="creators" value="creators" style="swimlane;html=1;startSize=40;horizontal=1;rounded=1;arcSize=10;absoluteArcSize=1;collapsible=0;container=1;recursiveResize=0;swimlaneLine=1;fillColor=#475569;swimlaneFillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontFamily=Helvetica;fontSize=17;fontStyle=1;fontColor=#FFFFFF;align=left;spacingLeft=16;shadow=0;" vertex="1" parent="1">
+                    <mxGeometry as="geometry" x="40" y="400" width="370" height="181" />
+                </mxCell>
+                <mxCell id="creators-id-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="creators">
+                    <mxGeometry as="geometry" x="1" y="40" width="368" height="27" />
+                </mxCell>
+                <mxCell id="creators-id-keys" value="PK" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#475569;" vertex="1" parent="creators">
+                    <mxGeometry as="geometry" x="10" y="40" width="53" height="27" />
+                </mxCell>
+                <mxCell id="creators-id" value="id" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;fontStyle=1;" vertex="1" parent="creators">
+                    <mxGeometry as="geometry" x="65" y="40" width="168" height="27" />
+                </mxCell>
+                <mxCell id="creators-id-type" value="serial" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="creators">
+                    <mxGeometry as="geometry" x="228" y="40" width="127" height="27" />
+                </mxCell>
+                <mxCell id="creators-first_name-keys" value="" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#475569;" vertex="1" parent="creators">
+                    <mxGeometry as="geometry" x="10" y="67" width="53" height="27" />
+                </mxCell>
+                <mxCell id="creators-first_name" value="first_name" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;" vertex="1" parent="creators">
+                    <mxGeometry as="geometry" x="65" y="67" width="168" height="27" />
+                </mxCell>
+                <mxCell id="creators-first_name-type" value="varchar(100)" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="creators">
+                    <mxGeometry as="geometry" x="228" y="67" width="127" height="27" />
+                </mxCell>
+                <mxCell id="creators-last_name-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="creators">
+                    <mxGeometry as="geometry" x="1" y="94" width="368" height="27" />
+                </mxCell>
+                <mxCell id="creators-last_name-keys" value="" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#475569;" vertex="1" parent="creators">
+                    <mxGeometry as="geometry" x="10" y="94" width="53" height="27" />
+                </mxCell>
+                <mxCell id="creators-last_name" value="last_name" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;" vertex="1" parent="creators">
+                    <mxGeometry as="geometry" x="65" y="94" width="168" height="27" />
+                </mxCell>
+                <mxCell id="creators-last_name-type" value="varchar(100)" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="creators">
+                    <mxGeometry as="geometry" x="228" y="94" width="127" height="27" />
+                </mxCell>
+                <mxCell id="creators-email-keys" value="UQ" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#475569;" vertex="1" parent="creators">
+                    <mxGeometry as="geometry" x="10" y="121" width="53" height="27" />
+                </mxCell>
+                <mxCell id="creators-email" value="email" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;fontStyle=1;" vertex="1" parent="creators">
+                    <mxGeometry as="geometry" x="65" y="121" width="168" height="27" />
+                </mxCell>
+                <mxCell id="creators-email-type" value="varchar(254)" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="creators">
+                    <mxGeometry as="geometry" x="228" y="121" width="127" height="27" />
+                </mxCell>
+                <mxCell id="creators-workplace-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="creators">
+                    <mxGeometry as="geometry" x="1" y="148" width="368" height="27" />
+                </mxCell>
+                <mxCell id="creators-workplace-keys" value="" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#475569;" vertex="1" parent="creators">
+                    <mxGeometry as="geometry" x="10" y="148" width="53" height="27" />
+                </mxCell>
+                <mxCell id="creators-workplace" value="workplace" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;" vertex="1" parent="creators">
+                    <mxGeometry as="geometry" x="65" y="148" width="168" height="27" />
+                </mxCell>
+                <mxCell id="creators-workplace-type" value="varchar(100)" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="creators">
+                    <mxGeometry as="geometry" x="228" y="148" width="127" height="27" />
+                </mxCell>
+                <mxCell id="events" value="events" style="swimlane;html=1;startSize=40;horizontal=1;rounded=1;arcSize=10;absoluteArcSize=1;collapsible=0;container=1;recursiveResize=0;swimlaneLine=1;fillColor=#1D4ED8;swimlaneFillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontFamily=Helvetica;fontSize=17;fontStyle=1;fontColor=#FFFFFF;align=left;spacingLeft=16;shadow=0;" vertex="1" parent="1">
+                    <mxGeometry as="geometry" x="530" y="760" width="370" height="331" />
+                </mxCell>
+                <mxCell id="events-id-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="1" y="40" width="368" height="27" />
+                </mxCell>
+                <mxCell id="events-id-keys" value="PK" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#1D4ED8;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="10" y="40" width="53" height="27" />
+                </mxCell>
+                <mxCell id="events-id" value="id" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;fontStyle=1;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="65" y="40" width="168" height="27" />
+                </mxCell>
+                <mxCell id="events-id-type" value="serial" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="228" y="40" width="127" height="27" />
+                </mxCell>
+                <mxCell id="events-title-keys" value="" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#1D4ED8;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="10" y="67" width="53" height="27" />
+                </mxCell>
+                <mxCell id="events-title" value="title" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="65" y="67" width="168" height="27" />
+                </mxCell>
+                <mxCell id="events-title-type" value="varchar(255)" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="228" y="67" width="127" height="27" />
+                </mxCell>
+                <mxCell id="events-description-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="1" y="94" width="368" height="27" />
+                </mxCell>
+                <mxCell id="events-description-keys" value="" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#1D4ED8;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="10" y="94" width="53" height="27" />
+                </mxCell>
+                <mxCell id="events-description" value="description" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="65" y="94" width="168" height="27" />
+                </mxCell>
+                <mxCell id="events-description-type" value="varchar(3000)" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="228" y="94" width="127" height="27" />
+                </mxCell>
+                <mxCell id="events-start_at-keys" value="" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#1D4ED8;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="10" y="121" width="53" height="27" />
+                </mxCell>
+                <mxCell id="events-start_at" value="start_at" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="65" y="121" width="168" height="27" />
+                </mxCell>
+                <mxCell id="events-start_at-type" value="timestamptz" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="228" y="121" width="127" height="27" />
+                </mxCell>
+                <mxCell id="events-end_at-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="1" y="148" width="368" height="27" />
+                </mxCell>
+                <mxCell id="events-end_at-keys" value="" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#1D4ED8;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="10" y="148" width="53" height="27" />
+                </mxCell>
+                <mxCell id="events-end_at" value="end_at" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="65" y="148" width="168" height="27" />
+                </mxCell>
+                <mxCell id="events-end_at-type" value="timestamptz" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="228" y="148" width="127" height="27" />
+                </mxCell>
+                <mxCell id="events-meeting_id-keys" value="FK" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#1D4ED8;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="10" y="175" width="53" height="27" />
+                </mxCell>
+                <mxCell id="events-meeting_id" value="meeting_id" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;fontStyle=1;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="65" y="175" width="168" height="27" />
+                </mxCell>
+                <mxCell id="events-meeting_id-type" value="integer" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="228" y="175" width="127" height="27" />
+                </mxCell>
+                <mxCell id="events-online_room_id-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="1" y="202" width="368" height="27" />
+                </mxCell>
+                <mxCell id="events-online_room_id-keys" value="FK" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#1D4ED8;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="10" y="202" width="53" height="27" />
+                </mxCell>
+                <mxCell id="events-online_room_id" value="online_room_id ?" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;fontStyle=1;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="65" y="202" width="168" height="27" />
+                </mxCell>
+                <mxCell id="events-online_room_id-type" value="integer" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="228" y="202" width="127" height="27" />
+                </mxCell>
+                <mxCell id="events-offline_room_id-keys" value="FK" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#1D4ED8;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="10" y="229" width="53" height="27" />
+                </mxCell>
+                <mxCell id="events-offline_room_id" value="offline_room_id ?" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;fontStyle=1;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="65" y="229" width="168" height="27" />
+                </mxCell>
+                <mxCell id="events-offline_room_id-type" value="integer" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="228" y="229" width="127" height="27" />
+                </mxCell>
+                <mxCell id="events-notes-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F1F5F9;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="1" y="260" width="368" height="70" />
+                </mxCell>
+                <mxCell id="events-note-0" value="CHECK end_at &gt; start_at" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=11;fontColor=#475569;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="12" y="265" width="346" height="21" />
+                </mxCell>
+                <mxCell id="events-note-1" value="CHECK offline_room_id IS NOT NULL" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=11;fontColor=#475569;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="12" y="286" width="346" height="21" />
+                </mxCell>
+                <mxCell id="events-note-2" value="OR online_room_id IS NOT NULL" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=11;fontColor=#475569;" vertex="1" parent="events">
+                    <mxGeometry as="geometry" x="12" y="307" width="346" height="21" />
+                </mxCell>
+                <mxCell id="online_rooms" value="online_rooms" style="swimlane;html=1;startSize=40;horizontal=1;rounded=1;arcSize=10;absoluteArcSize=1;collapsible=0;container=1;recursiveResize=0;swimlaneLine=1;fillColor=#0E7490;swimlaneFillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontFamily=Helvetica;fontSize=17;fontStyle=1;fontColor=#FFFFFF;align=left;spacingLeft=16;shadow=0;" vertex="1" parent="1">
+                    <mxGeometry as="geometry" x="40" y="780" width="370" height="127" />
+                </mxCell>
+                <mxCell id="online_rooms-id-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="online_rooms">
+                    <mxGeometry as="geometry" x="1" y="40" width="368" height="27" />
+                </mxCell>
+                <mxCell id="online_rooms-id-keys" value="PK" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#0E7490;" vertex="1" parent="online_rooms">
+                    <mxGeometry as="geometry" x="10" y="40" width="53" height="27" />
+                </mxCell>
+                <mxCell id="online_rooms-id" value="id" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;fontStyle=1;" vertex="1" parent="online_rooms">
+                    <mxGeometry as="geometry" x="65" y="40" width="168" height="27" />
+                </mxCell>
+                <mxCell id="online_rooms-id-type" value="serial" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="online_rooms">
+                    <mxGeometry as="geometry" x="228" y="40" width="127" height="27" />
+                </mxCell>
+                <mxCell id="online_rooms-url-keys" value="UQ" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#0E7490;" vertex="1" parent="online_rooms">
+                    <mxGeometry as="geometry" x="10" y="67" width="53" height="27" />
+                </mxCell>
+                <mxCell id="online_rooms-url" value="url" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;fontStyle=1;" vertex="1" parent="online_rooms">
+                    <mxGeometry as="geometry" x="65" y="67" width="168" height="27" />
+                </mxCell>
+                <mxCell id="online_rooms-url-type" value="varchar(2000)" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="online_rooms">
+                    <mxGeometry as="geometry" x="228" y="67" width="127" height="27" />
+                </mxCell>
+                <mxCell id="online_rooms-platform-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="online_rooms">
+                    <mxGeometry as="geometry" x="1" y="94" width="368" height="27" />
+                </mxCell>
+                <mxCell id="online_rooms-platform-keys" value="" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#0E7490;" vertex="1" parent="online_rooms">
+                    <mxGeometry as="geometry" x="10" y="94" width="53" height="27" />
+                </mxCell>
+                <mxCell id="online_rooms-platform" value="platform ?" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;" vertex="1" parent="online_rooms">
+                    <mxGeometry as="geometry" x="65" y="94" width="168" height="27" />
+                </mxCell>
+                <mxCell id="online_rooms-platform-type" value="varchar(100)" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="online_rooms">
+                    <mxGeometry as="geometry" x="228" y="94" width="127" height="27" />
+                </mxCell>
+                <mxCell id="offline_rooms" value="offline_rooms" style="swimlane;html=1;startSize=40;horizontal=1;rounded=1;arcSize=10;absoluteArcSize=1;collapsible=0;container=1;recursiveResize=0;swimlaneLine=1;fillColor=#0E7490;swimlaneFillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontFamily=Helvetica;fontSize=17;fontStyle=1;fontColor=#FFFFFF;align=left;spacingLeft=16;shadow=0;" vertex="1" parent="1">
+                    <mxGeometry as="geometry" x="1020" y="780" width="370" height="154" />
+                </mxCell>
+                <mxCell id="offline_rooms-id-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="offline_rooms">
+                    <mxGeometry as="geometry" x="1" y="40" width="368" height="27" />
+                </mxCell>
+                <mxCell id="offline_rooms-id-keys" value="PK" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#0E7490;" vertex="1" parent="offline_rooms">
+                    <mxGeometry as="geometry" x="10" y="40" width="53" height="27" />
+                </mxCell>
+                <mxCell id="offline_rooms-id" value="id" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;fontStyle=1;" vertex="1" parent="offline_rooms">
+                    <mxGeometry as="geometry" x="65" y="40" width="168" height="27" />
+                </mxCell>
+                <mxCell id="offline_rooms-id-type" value="serial" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="offline_rooms">
+                    <mxGeometry as="geometry" x="228" y="40" width="127" height="27" />
+                </mxCell>
+                <mxCell id="offline_rooms-address-keys" value="" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#0E7490;" vertex="1" parent="offline_rooms">
+                    <mxGeometry as="geometry" x="10" y="67" width="53" height="27" />
+                </mxCell>
+                <mxCell id="offline_rooms-address" value="address" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;" vertex="1" parent="offline_rooms">
+                    <mxGeometry as="geometry" x="65" y="67" width="168" height="27" />
+                </mxCell>
+                <mxCell id="offline_rooms-address-type" value="varchar(1000)" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="offline_rooms">
+                    <mxGeometry as="geometry" x="228" y="67" width="127" height="27" />
+                </mxCell>
+                <mxCell id="offline_rooms-place-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F8FAFC;" vertex="1" parent="offline_rooms">
+                    <mxGeometry as="geometry" x="1" y="94" width="368" height="27" />
+                </mxCell>
+                <mxCell id="offline_rooms-place-keys" value="" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=10;fontStyle=1;fontColor=#0E7490;" vertex="1" parent="offline_rooms">
+                    <mxGeometry as="geometry" x="10" y="94" width="53" height="27" />
+                </mxCell>
+                <mxCell id="offline_rooms-place" value="place" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=13;fontColor=#0F172A;" vertex="1" parent="offline_rooms">
+                    <mxGeometry as="geometry" x="65" y="94" width="168" height="27" />
+                </mxCell>
+                <mxCell id="offline_rooms-place-type" value="varchar(500)" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=right;fontSize=12;fontColor=#64748B;" vertex="1" parent="offline_rooms">
+                    <mxGeometry as="geometry" x="228" y="94" width="127" height="27" />
+                </mxCell>
+                <mxCell id="offline_rooms-notes-bg" value="" style="rounded=0;strokeColor=none;fillColor=#F1F5F9;" vertex="1" parent="offline_rooms">
+                    <mxGeometry as="geometry" x="1" y="125" width="368" height="28" />
+                </mxCell>
+                <mxCell id="offline_rooms-note-0" value="UNIQUE (address, place)" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=11;fontColor=#475569;" vertex="1" parent="offline_rooms">
+                    <mxGeometry as="geometry" x="12" y="130" width="346" height="21" />
+                </mxCell>
+                <mxCell id="members-registrations" edge="1" parent="1" source="members" target="registrations" style="edgeStyle=none;orthogonal=1;rounded=0;html=1;strokeColor=#64748B;strokeWidth=1.5;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;startSize=14;endSize=14;exitPerimeter=0;entryPerimeter=0;exitX=1.0;exitY=0.3474025974025974;entryX=0.0;entryY=0.3474025974025974;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="members-registrations-delete" value="CASCADE" vertex="1" connectable="0" parent="members-registrations" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=11;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="0" y="-12" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="commentaries-registrations" edge="1" parent="1" source="commentaries" target="registrations" style="edgeStyle=none;orthogonal=1;rounded=0;html=1;strokeColor=#64748B;strokeWidth=1.5;startArrow=ERzeroToOne;endArrow=ERzeroToMany;startFill=0;endFill=0;startSize=14;endSize=14;exitPerimeter=0;entryPerimeter=0;exitX=0.0;exitY=0.3057142857142857;entryX=1.0;entryY=0.698051948051948;dashed=1;dashPattern=5 4;">
+                    <mxGeometry as="geometry" relative="1">
+                        <Array as="points">
+                            <mxPoint x="960" y="183.5" />
+                            <mxPoint x="960" y="237.5" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="commentaries-registrations-delete" value="NO ACTION" vertex="1" connectable="0" parent="commentaries-registrations" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=11;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="0" y="-12" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="meetings-registrations" edge="1" parent="1" source="meetings" target="registrations" style="edgeStyle=none;orthogonal=1;rounded=0;html=1;strokeColor=#64748B;strokeWidth=1.5;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;startSize=14;endSize=14;exitPerimeter=0;entryPerimeter=0;exitX=0.5;exitY=0.0;entryX=0.5;entryY=1.0;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="meetings-registrations-delete" value="CASCADE" vertex="1" connectable="0" parent="meetings-registrations" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=11;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="0" y="-12" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="creators-meetings" edge="1" parent="1" source="creators" target="meetings" style="edgeStyle=none;orthogonal=1;rounded=0;html=1;strokeColor=#64748B;strokeWidth=1.5;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;startSize=14;endSize=14;exitPerimeter=0;entryPerimeter=0;exitX=1.0;exitY=0.2955801104972376;entryX=0.0;entryY=0.7614840989399293;dashed=1;dashPattern=5 4;">
+                    <mxGeometry as="geometry" relative="1">
+                        <Array as="points">
+                            <mxPoint x="470" y="453.5" />
+                            <mxPoint x="470" y="585.5" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="creators-meetings-delete" value="RESTRICT" vertex="1" connectable="0" parent="creators-meetings" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=11;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="0" y="-12" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="meetings-events" edge="1" parent="1" source="meetings" target="events" style="edgeStyle=none;orthogonal=1;rounded=0;html=1;strokeColor=#64748B;strokeWidth=1.5;startArrow=ERmandOne;endArrow=ERzeroToMany;startFill=0;endFill=0;startSize=14;endSize=14;exitPerimeter=0;entryPerimeter=0;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;dashed=1;dashPattern=5 4;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="meetings-events-delete" value="CASCADE" vertex="1" connectable="0" parent="meetings-events" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=11;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="0" y="-12" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="online_rooms-events" edge="1" parent="1" source="online_rooms" target="events" style="edgeStyle=none;orthogonal=1;rounded=0;html=1;strokeColor=#64748B;strokeWidth=1.5;startArrow=ERzeroToOne;endArrow=ERzeroToMany;startFill=0;endFill=0;startSize=14;endSize=14;exitPerimeter=0;entryPerimeter=0;exitX=1.0;exitY=0.421259842519685;entryX=0.0;entryY=0.6510574018126888;dashed=1;dashPattern=5 4;">
+                    <mxGeometry as="geometry" relative="1">
+                        <Array as="points">
+                            <mxPoint x="470" y="833.5" />
+                            <mxPoint x="470" y="975.5" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="online_rooms-events-delete" value="RESTRICT" vertex="1" connectable="0" parent="online_rooms-events" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=11;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="0" y="-12" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="offline_rooms-events" edge="1" parent="1" source="offline_rooms" target="events" style="edgeStyle=none;orthogonal=1;rounded=0;html=1;strokeColor=#64748B;strokeWidth=1.5;startArrow=ERzeroToOne;endArrow=ERzeroToMany;startFill=0;endFill=0;startSize=14;endSize=14;exitPerimeter=0;entryPerimeter=0;exitX=0.0;exitY=0.3474025974025974;entryX=1.0;entryY=0.7326283987915407;dashed=1;dashPattern=5 4;">
+                    <mxGeometry as="geometry" relative="1">
+                        <Array as="points">
+                            <mxPoint x="960" y="833.5" />
+                            <mxPoint x="960" y="1002.5" />
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="offline_rooms-events-delete" value="RESTRICT" vertex="1" connectable="0" parent="offline_rooms-events" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=11;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="0" y="-12" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="legend" value="PK — первичный ключ     FK — внешний ключ     UQ — UNIQUE     ? — допускается NULL (остальные поля NOT NULL)" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=12;fontColor=#475569;" vertex="1" parent="1">
+                    <mxGeometry as="geometry" x="40" y="1116" width="1350" height="22" />
+                </mxCell>
+                <mxCell id="legend-delete" value="На связях — ON DELETE. Сплошная линия — идентифицирующая связь; пунктир — неидентифицирующая." style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=11;fontColor=#64748B;" vertex="1" parent="1">
+                    <mxGeometry as="geometry" x="40" y="1140" width="1350" height="20" />
+                </mxCell>
+                <mxCell id="legend-cardinality" parent="1" vertex="1" value="|| — ровно один; ○| — ноль или один; ○&amp;lt; — ноль или много. EXCLUDE отключены в исходной схеме." style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=hidden;verticalAlign=middle;fontFamily=Helvetica;align=left;fontSize=11;fontColor=#64748B;">
+                    <mxGeometry as="geometry" x="40" y="1164" width="1350" height="20" />
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="chen" name="Чен">
+        <mxGraphModel dx="2560" dy="2000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2560" pageHeight="2040" math="0" shadow="0" background="#ffffff">
+            <root>
+                <mxCell id="0" />
+                <mxCell id="1" parent="0" />
+                <mxCell id="title" value="Система управления конференциями" parent="1" vertex="1" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Helvetica;align=left;fontSize=30;fontStyle=1;fontColor=#0F172A;">
+                    <mxGeometry as="geometry" x="50" y="22" width="1500" height="40" />
+                </mxCell>
+                <mxCell id="subtitle" value="Нотация Чена · 001_schema.sql + 002_comment.sql" parent="1" vertex="1" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Helvetica;align=left;fontSize=17;fontColor=#64748B;">
+                    <mxGeometry as="geometry" x="50" y="70" width="1500" height="30" />
+                </mxCell>
+                <mxCell id="members" value="members" parent="1" vertex="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#475569;strokeColor=#475569;fontColor=#FFFFFF;fontFamily=Helvetica;fontSize=21;fontStyle=1;">
+                    <mxGeometry as="geometry" x="300" y="328" width="240" height="64" />
+                </mxCell>
+                <mxCell id="members-id" value="id" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=4;">
+                    <mxGeometry as="geometry" x="305" y="123" width="230" height="54" />
+                </mxCell>
+                <mxCell id="members-id-edge" source="members" target="members-id" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="members-first_name" value="first_name" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="35" y="203" width="230" height="54" />
+                </mxCell>
+                <mxCell id="members-first_name-edge" source="members" target="members-first_name" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="members-last_name" value="last_name" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="35" y="463" width="230" height="54" />
+                </mxCell>
+                <mxCell id="members-last_name-edge" source="members" target="members-last_name" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="members-email" value="email (UQ)" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="305" y="543" width="230" height="54" />
+                </mxCell>
+                <mxCell id="members-email-edge" source="members" target="members-email" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="registrations" value="registrations" parent="1" vertex="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#0F766E;strokeColor=#0F766E;fontColor=#FFFFFF;fontFamily=Helvetica;fontSize=21;fontStyle=1;">
+                    <mxGeometry as="geometry" x="1140" y="328" width="240" height="64" />
+                </mxCell>
+                <mxCell id="registrations-member_id" value="member_id (FK)" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=4;">
+                    <mxGeometry as="geometry" x="885" y="133" width="230" height="54" />
+                </mxCell>
+                <mxCell id="registrations-member_id-edge" source="registrations" target="registrations-member_id" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="registrations-meeting_id" value="meeting_id (FK)" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=4;">
+                    <mxGeometry as="geometry" x="1145" y="113" width="230" height="54" />
+                </mxCell>
+                <mxCell id="registrations-meeting_id-edge" source="registrations" target="registrations-meeting_id" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="registrations-comment_id" value="comment_id (FK) ?" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="1405" y="133" width="230" height="54" />
+                </mxCell>
+                <mxCell id="registrations-comment_id-edge" source="registrations" target="registrations-comment_id" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="commentaries" value="commentaries" parent="1" vertex="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#7C3AED;strokeColor=#7C3AED;fontColor=#FFFFFF;fontFamily=Helvetica;fontSize=21;fontStyle=1;">
+                    <mxGeometry as="geometry" x="1980" y="328" width="240" height="64" />
+                </mxCell>
+                <mxCell id="commentaries-id" value="id" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=4;">
+                    <mxGeometry as="geometry" x="1985" y="123" width="230" height="54" />
+                </mxCell>
+                <mxCell id="commentaries-id-edge" source="commentaries" target="commentaries-id" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="commentaries-description" value="description ?" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="2255" y="203" width="230" height="54" />
+                </mxCell>
+                <mxCell id="commentaries-description-edge" source="commentaries" target="commentaries-description" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="commentaries-mark" value="mark" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="2255" y="463" width="230" height="54" />
+                </mxCell>
+                <mxCell id="commentaries-mark-edge" source="commentaries" target="commentaries-mark" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="creators" value="creators" parent="1" vertex="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#475569;strokeColor=#475569;fontColor=#FFFFFF;fontFamily=Helvetica;fontSize=21;fontStyle=1;">
+                    <mxGeometry as="geometry" x="300" y="968" width="240" height="64" />
+                </mxCell>
+                <mxCell id="creators-id" value="id" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=4;">
+                    <mxGeometry as="geometry" x="305" y="773" width="230" height="54" />
+                </mxCell>
+                <mxCell id="creators-id-edge" source="creators" target="creators-id" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="creators-first_name" value="first_name" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="35" y="833" width="230" height="54" />
+                </mxCell>
+                <mxCell id="creators-first_name-edge" source="creators" target="creators-first_name" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="creators-last_name" value="last_name" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="35" y="933" width="230" height="54" />
+                </mxCell>
+                <mxCell id="creators-last_name-edge" source="creators" target="creators-last_name" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="creators-email" value="email (UQ)" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="35" y="1033" width="230" height="54" />
+                </mxCell>
+                <mxCell id="creators-email-edge" source="creators" target="creators-email" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="creators-workplace" value="workplace" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="305" y="1173" width="230" height="54" />
+                </mxCell>
+                <mxCell id="creators-workplace-edge" source="creators" target="creators-workplace" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="meetings" value="meetings" parent="1" vertex="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#1D4ED8;strokeColor=#1D4ED8;fontColor=#FFFFFF;fontFamily=Helvetica;fontSize=21;fontStyle=1;">
+                    <mxGeometry as="geometry" x="1140" y="968" width="240" height="64" />
+                </mxCell>
+                <mxCell id="meetings-id" value="id" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=4;">
+                    <mxGeometry as="geometry" x="865" y="793" width="230" height="54" />
+                </mxCell>
+                <mxCell id="meetings-id-edge" source="meetings" target="meetings-id" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="meetings-title" value="title" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="865" y="883" width="230" height="54" />
+                </mxCell>
+                <mxCell id="meetings-title-edge" source="meetings" target="meetings-title" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="meetings-description" value="description ?" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="865" y="1093" width="230" height="54" />
+                </mxCell>
+                <mxCell id="meetings-description-edge" source="meetings" target="meetings-description" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="meetings-capacity" value="capacity" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="1425" y="793" width="230" height="54" />
+                </mxCell>
+                <mxCell id="meetings-capacity-edge" source="meetings" target="meetings-capacity" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="meetings-start_at" value="start_at" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="1475" y="913" width="230" height="54" />
+                </mxCell>
+                <mxCell id="meetings-start_at-edge" source="meetings" target="meetings-start_at" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="meetings-end_at" value="end_at" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="1475" y="1033" width="230" height="54" />
+                </mxCell>
+                <mxCell id="meetings-end_at-edge" source="meetings" target="meetings-end_at" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="meetings-creator_id" value="creator_id (FK)" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="1425" y="1153" width="230" height="54" />
+                </mxCell>
+                <mxCell id="meetings-creator_id-edge" source="meetings" target="meetings-creator_id" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="online_rooms" value="online_rooms" parent="1" vertex="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#0E7490;strokeColor=#0E7490;fontColor=#FFFFFF;fontFamily=Helvetica;fontSize=21;fontStyle=1;">
+                    <mxGeometry as="geometry" x="300" y="1608" width="240" height="64" />
+                </mxCell>
+                <mxCell id="online_rooms-id" value="id" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=4;">
+                    <mxGeometry as="geometry" x="35" y="1493" width="230" height="54" />
+                </mxCell>
+                <mxCell id="online_rooms-id-edge" source="online_rooms" target="online_rooms-id" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="online_rooms-url" value="url (UQ)" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="35" y="1733" width="230" height="54" />
+                </mxCell>
+                <mxCell id="online_rooms-url-edge" source="online_rooms" target="online_rooms-url" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="online_rooms-platform" value="platform ?" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="305" y="1813" width="230" height="54" />
+                </mxCell>
+                <mxCell id="online_rooms-platform-edge" source="online_rooms" target="online_rooms-platform" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="events" value="events" parent="1" vertex="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#1D4ED8;strokeColor=#1D4ED8;fontColor=#FFFFFF;fontFamily=Helvetica;fontSize=21;fontStyle=1;">
+                    <mxGeometry as="geometry" x="1140" y="1608" width="240" height="64" />
+                </mxCell>
+                <mxCell id="events-id" value="id" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=4;">
+                    <mxGeometry as="geometry" x="865" y="1433" width="230" height="54" />
+                </mxCell>
+                <mxCell id="events-id-edge" source="events" target="events-id" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="events-title" value="title" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="865" y="1523" width="230" height="54" />
+                </mxCell>
+                <mxCell id="events-title-edge" source="events" target="events-title" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="events-description" value="description" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="865" y="1703" width="230" height="54" />
+                </mxCell>
+                <mxCell id="events-description-edge" source="events" target="events-description" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="events-start_at" value="start_at" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="865" y="1793" width="230" height="54" />
+                </mxCell>
+                <mxCell id="events-start_at-edge" source="events" target="events-start_at" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="events-end_at" value="end_at" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="1425" y="1433" width="230" height="54" />
+                </mxCell>
+                <mxCell id="events-end_at-edge" source="events" target="events-end_at" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="events-meeting_id" value="meeting_id (FK)" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="1425" y="1523" width="230" height="54" />
+                </mxCell>
+                <mxCell id="events-meeting_id-edge" source="events" target="events-meeting_id" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="events-online_room_id" value="online_room_id (FK) ?" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="1425" y="1703" width="230" height="54" />
+                </mxCell>
+                <mxCell id="events-online_room_id-edge" source="events" target="events-online_room_id" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="events-offline_room_id" value="offline_room_id (FK) ?" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="1425" y="1793" width="230" height="54" />
+                </mxCell>
+                <mxCell id="events-offline_room_id-edge" source="events" target="events-offline_room_id" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="offline_rooms" value="offline_rooms" parent="1" vertex="1" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#0E7490;strokeColor=#0E7490;fontColor=#FFFFFF;fontFamily=Helvetica;fontSize=21;fontStyle=1;">
+                    <mxGeometry as="geometry" x="1980" y="1608" width="240" height="64" />
+                </mxCell>
+                <mxCell id="offline_rooms-id" value="id" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=4;">
+                    <mxGeometry as="geometry" x="2255" y="1493" width="230" height="54" />
+                </mxCell>
+                <mxCell id="offline_rooms-id-edge" source="offline_rooms" target="offline_rooms-id" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="offline_rooms-address" value="address" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="2255" y="1733" width="230" height="54" />
+                </mxCell>
+                <mxCell id="offline_rooms-address-edge" source="offline_rooms" target="offline_rooms-address" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="offline_rooms-place" value="place" parent="1" vertex="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#0F172A;fontFamily=Helvetica;fontSize=16;fontStyle=0;">
+                    <mxGeometry as="geometry" x="1985" y="1813" width="230" height="54" />
+                </mxCell>
+                <mxCell id="offline_rooms-place-edge" source="offline_rooms" target="offline_rooms-place" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="members-registrations" value="регистрируется" parent="1" vertex="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#94A3B8;strokeWidth=1.3;fontColor=#334155;fontFamily=Helvetica;fontSize=16;">
+                    <mxGeometry as="geometry" x="750" y="310" width="180" height="100" />
+                </mxCell>
+                <mxCell id="members-registrations-parent" source="members" target="members-registrations" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="members-registrations-child" source="members-registrations" target="registrations" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;shape=link;width=4;fillColor=#FFFFFF;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="members-registrations-one" parent="members-registrations-parent" value="1" vertex="1" connectable="0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=16;fontStyle=1;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="-0.55" y="-17" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="members-registrations-many" parent="members-registrations-child" value="N" vertex="1" connectable="0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=16;fontStyle=1;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="0.55" y="-17" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="commentaries-registrations" value="отзыв" parent="1" vertex="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#94A3B8;strokeWidth=1.3;fontColor=#334155;fontFamily=Helvetica;fontSize=16;">
+                    <mxGeometry as="geometry" x="1590" y="310" width="180" height="100" />
+                </mxCell>
+                <mxCell id="commentaries-registrations-parent" source="commentaries" target="commentaries-registrations" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="commentaries-registrations-child" source="commentaries-registrations" target="registrations" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="commentaries-registrations-one" parent="commentaries-registrations-parent" value="1" vertex="1" connectable="0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=16;fontStyle=1;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="-0.55" y="-17" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="commentaries-registrations-many" parent="commentaries-registrations-child" value="N" vertex="1" connectable="0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=16;fontStyle=1;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="0.55" y="-17" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="meetings-registrations" value="регистрация" parent="1" vertex="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#94A3B8;strokeWidth=1.3;fontColor=#334155;fontFamily=Helvetica;fontSize=16;">
+                    <mxGeometry as="geometry" x="1170" y="630" width="180" height="100" />
+                </mxCell>
+                <mxCell id="meetings-registrations-parent" source="meetings" target="meetings-registrations" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="meetings-registrations-child" source="meetings-registrations" target="registrations" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;shape=link;width=4;fillColor=#FFFFFF;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="meetings-registrations-one" parent="meetings-registrations-parent" value="1" vertex="1" connectable="0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=16;fontStyle=1;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="-0.55" y="-17" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="meetings-registrations-many" parent="meetings-registrations-child" value="N" vertex="1" connectable="0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=16;fontStyle=1;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="0.55" y="-17" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="creators-meetings" value="организует" parent="1" vertex="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#94A3B8;strokeWidth=1.3;fontColor=#334155;fontFamily=Helvetica;fontSize=16;">
+                    <mxGeometry as="geometry" x="750" y="950" width="180" height="100" />
+                </mxCell>
+                <mxCell id="creators-meetings-parent" source="creators" target="creators-meetings" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="creators-meetings-child" source="creators-meetings" target="meetings" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;shape=link;width=4;fillColor=#FFFFFF;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="creators-meetings-one" parent="creators-meetings-parent" value="1" vertex="1" connectable="0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=16;fontStyle=1;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="-0.55" y="-17" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="creators-meetings-many" parent="creators-meetings-child" value="N" vertex="1" connectable="0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=16;fontStyle=1;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="0.55" y="-17" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="meetings-events" value="содержит" parent="1" vertex="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#94A3B8;strokeWidth=1.3;fontColor=#334155;fontFamily=Helvetica;fontSize=16;">
+                    <mxGeometry as="geometry" x="1170" y="1270" width="180" height="100" />
+                </mxCell>
+                <mxCell id="meetings-events-parent" source="meetings" target="meetings-events" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="meetings-events-child" source="meetings-events" target="events" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;shape=link;width=4;fillColor=#FFFFFF;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="meetings-events-one" parent="meetings-events-parent" value="1" vertex="1" connectable="0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=16;fontStyle=1;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="-0.55" y="-17" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="meetings-events-many" parent="meetings-events-child" value="N" vertex="1" connectable="0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=16;fontStyle=1;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="0.55" y="-17" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="online_rooms-events" value="онлайн" parent="1" vertex="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#94A3B8;strokeWidth=1.3;fontColor=#334155;fontFamily=Helvetica;fontSize=16;">
+                    <mxGeometry as="geometry" x="750" y="1590" width="180" height="100" />
+                </mxCell>
+                <mxCell id="online_rooms-events-parent" source="online_rooms" target="online_rooms-events" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="online_rooms-events-child" source="online_rooms-events" target="events" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="online_rooms-events-one" parent="online_rooms-events-parent" value="1" vertex="1" connectable="0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=16;fontStyle=1;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="-0.55" y="-17" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="online_rooms-events-many" parent="online_rooms-events-child" value="N" vertex="1" connectable="0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=16;fontStyle=1;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="0.55" y="-17" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="offline_rooms-events" value="офлайн" parent="1" vertex="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#94A3B8;strokeWidth=1.3;fontColor=#334155;fontFamily=Helvetica;fontSize=16;">
+                    <mxGeometry as="geometry" x="1590" y="1590" width="180" height="100" />
+                </mxCell>
+                <mxCell id="offline_rooms-events-parent" source="offline_rooms" target="offline_rooms-events" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="offline_rooms-events-child" source="offline_rooms-events" target="events" parent="1" edge="1" style="html=1;rounded=0;startArrow=none;endArrow=none;strokeColor=#64748B;strokeWidth=1.3;">
+                    <mxGeometry as="geometry" relative="1" />
+                </mxCell>
+                <mxCell id="offline_rooms-events-one" parent="offline_rooms-events-parent" value="1" vertex="1" connectable="0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=16;fontStyle=1;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="-0.55" y="-17" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="offline_rooms-events-many" parent="offline_rooms-events-child" value="N" vertex="1" connectable="0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontFamily=Helvetica;fontSize=16;fontStyle=1;fontColor=#475569;labelBackgroundColor=#FFFFFF;">
+                    <mxGeometry as="geometry" x="0.55" y="-17" relative="1">
+                        <mxPoint as="offset" x="0" y="0" />
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="constraints" value="&lt;b&gt;Ограничения схемы&lt;/b&gt;&lt;br&gt;meetings: capacity &amp;gt; 0; end_at &amp;gt; start_at&lt;br&gt;events: end_at &amp;gt; start_at; указана хотя бы одна комната&lt;br&gt;commentaries: 1 ≤ mark ≤ 10&lt;br&gt;offline_rooms: UNIQUE (address, place)&lt;br&gt;registrations: PK (member_id, meeting_id)&lt;br&gt;comment_id не UNIQUE: один отзыв может иметь несколько ссылок&lt;br&gt;&lt;b&gt;ON DELETE: родитель → потомок&lt;/b&gt;&lt;br&gt;members → registrations: CASCADE&lt;br&gt;meetings → registrations, events: CASCADE&lt;br&gt;creators → meetings: RESTRICT&lt;br&gt;online_rooms, offline_rooms → events: RESTRICT&lt;br&gt;commentaries → registrations: NO ACTION" parent="1" vertex="1" style="rounded=1;arcSize=8;html=1;whiteSpace=wrap;fillColor=#F8FAFC;strokeColor=#CBD5E1;align=left;verticalAlign=top;spacing=22;fontFamily=Helvetica;fontSize=17;fontColor=#475569;">
+                    <mxGeometry as="geometry" x="1830" y="740" width="670" height="560" />
+                </mxCell>
+                <mxCell id="legend" value="Прямоугольник — сущность; ромб — связь; овал — атрибут; подчёркивание — первичный ключ." parent="1" vertex="1" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Helvetica;align=left;fontSize=17;fontColor=#475569;">
+                    <mxGeometry as="geometry" x="50" y="1920" width="2450" height="28" />
+                </mxCell>
+                <mxCell id="legend-participation" value="Двойная линия — обязательное участие; одинарная — необязательное. 1 / N — максимальная кратность." parent="1" vertex="1" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Helvetica;align=left;fontSize=17;fontColor=#475569;">
+                    <mxGeometry as="geometry" x="50" y="1950" width="2450" height="28" />
+                </mxCell>
+                <mxCell id="legend-fields" value="FK — внешний ключ; UQ — UNIQUE; ? — допускается NULL. На обоих листах показана одна и та же физическая схема." parent="1" vertex="1" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;fontFamily=Helvetica;align=left;fontSize=16;fontColor=#64748B;">
+                    <mxGeometry as="geometry" x="50" y="1980" width="2450" height="28" />
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
