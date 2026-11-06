@@ -1,27 +1,4 @@
--- Генерация данных для задания 1.1 на схеме после миграций 001, 002 и 003.
--- Запуск из корня проекта:
--- psql -v ON_ERROR_STOP=1 -d <имя_базы> -f lab02/data/generate.sql
---
--- Добавляется 133 записи:
--- members: 20, creators: 5, meetings: 9, online_rooms: 4,
--- offline_rooms: 4, events: 24, registrations: 48, commentaries: 16,
--- meeting_statuses: 3.
--- Даты конференций: сентябрь, октябрь и ноябрь 2026 года.
--- Существующие записи сохраняются; ID новых записей получаются через RETURNING.
--- Скрипт рассчитан на однократный запуск: повторный запуск отклоняется
--- ограничением уникальности, изменения транзакции отменяются.
--- Состояния конференций: 6 completed, 2 planned, 1 cancelled.
-
-BEGIN;
-
-SET LOCAL TIME ZONE 'Europe/Moscow';
-
-INSERT INTO meeting_statuses (code, title, description) VALUES
-    ('planned', 'Запланирована', 'Конференция запланирована и ещё не завершена.'),
-    ('completed', 'Завершена', 'Конференция состоялась и завершена.'),
-    ('cancelled', 'Отменена', 'Конференция отменена и не будет проводиться.');
-
-ALTER TABLE meetings VALIDATE CONSTRAINT meetings_status_code_fkey;
+-- Задание 1.1. Данные за сентябрь, октябрь и ноябрь 2026 года.
 
 DO $$
 DECLARE
@@ -227,5 +204,3 @@ BEGIN
     END LOOP;
 END;
 $$;
-
-COMMIT;
